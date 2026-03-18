@@ -8,7 +8,7 @@ const CTA = () => {
 
     </div>
         <button className='cta-button'>
-        Book Free Consultancy
+        Book A Consultancy
         </button>
 </div>
   )

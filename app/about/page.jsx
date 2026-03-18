@@ -53,11 +53,11 @@ const page = () => {
 
             <div className='text-[12px] font-normal mb-24'>
                 <p>
-                BRITISH AUC is a leading organization that offers comprehensive support for students aspiring to study abroad. Our expert team assists students throughout the entire process, providing free visa and admission application services to universities worldwide. With a proven track record, we have successfully guided thousands of students to renowned universities and colleges across the globe.
+                BRITISH AUC is a leading organization that offers comprehensive support for students aspiring to study abroad. Our expert team assists students throughout the entire process, providing visa and admission application services to universities worldwide. With a proven track record, we have successfully guided thousands of students to renowned universities and colleges across the globe.
                 </p>
                 <br />
                 <p>
-                We offer a one-stop shop, providing up-to-date information on universities, scholarships, accommodations, and pre-departure support. Our personalized guidance ensures a seamless and stress-free experience. At BRITISH AUC, we are committed to helping students make informed decisions, unlock their potential, and embark on a transformative journey towards a brighter future.
+                We offer a one-stop shop, providing up-to-date information on universities, scholarships, accommodations, and pre-departure support. Our personalized guidance ensures a seamless and smooth experience. At BRITISH AUC, we are committed to helping students make informed decisions, unlock their potential, and embark on a transformative journey towards a brighter future.
                 </p>
             </div>
             </div>

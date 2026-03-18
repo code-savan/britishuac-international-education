@@ -30,22 +30,22 @@ const About = ({about}) => {
                 {
                     about ?
                     <p className='text-sm sm:text-base'>
-                        <span className='font-semibold'>BRITISH AUC</span> is a leading organization that offers comprehensive support for students aspiring to study abroad. Our expert team assists students throughout the entire process, providing free visa and admission application services to universities worldwide. With a proven track record, we have successfully guided thousands of students to renowned universities and colleges across the globe.
+                        <span className='font-semibold'>BRITISH AUC</span> is a leading organization that offers comprehensive support for students aspiring to study abroad. Our expert team assists students throughout the entire process, providing visa and admission application services to universities worldwide. With a proven track record, we have successfully guided thousands of students to renowned universities and colleges across the globe.
                     </p>
                     :
                     <p className='text-sm sm:text-base'>
-                        <span className='font-semibold'>BRITISH AUC</span> is a Free Visa and Admission Application Centre that support admission and visa application to universities and countries around the world for WHOLLY FREE OF CHARGE.
+                        <span className='font-semibold'>BRITISH AUC</span> is a Visa and Admission Application Centre that support admission and visa application to universities and countries around the world.
                     </p>
                 }
 
                 {
                     about ?
                     <p className='text-sm sm:text-base'>
-                        We offer a one-stop shop, providing up-to-date information on universities, scholarships, accommodations, and pre-departure support. Our personalized guidance ensures a seamless and stress-free experience. At <span className='font-semibold text-slate-800'>BRITISH AUC</span>, we are committed to helping students make informed decisions, unlock their potential, and embark on a transformative journey towards a brighter future.
+                        We offer a one-stop shop, providing up-to-date information on universities, scholarships, accommodations, and pre-departure support. Our personalized guidance ensures a seamless and smooth experience. At <span className='font-semibold text-slate-800'>BRITISH AUC</span>, we are committed to helping students make informed decisions, unlock their potential, and embark on a transformative journey towards a brighter future.
                     </p>
                     :
                     <p className='text-sm sm:text-base'>
-                        <span className='font-semibold'>BRITISH AUC&apos;s</span> Free Application Centre is a one-stop shop for all your study abroad support services. Our application centres have helped thousands of international students study in universities and colleges in the UK, USA, Canada, Australia, Ireland, Germany, Turkey, Cyprus, etc.
+                        <span className='font-semibold'>BRITISH AUC&apos;s</span> Application Centre is a one-stop shop for all your study abroad support services. Our application centres have helped thousands of international students study in universities and colleges in the UK, USA, Canada, Australia, Ireland, Germany, Turkey, Cyprus, etc.
                     </p>
                 }
 

@@ -55,7 +55,7 @@ export const success = [
 export const helpContent = [
     {
         title: "Education and Career Counseling",
-        content: `At British AUC's Free Application Centre, our highly qualified and experienced counsellors are dedicated to guiding you towards the right academic path and helping you make informed decisions about your future career.
+        content: `At British AUC's Application Centre, our highly qualified and experienced counsellors are dedicated to guiding you towards the right academic path and helping you make informed decisions about your future career.
     <br/>
    We understand that budget constraints can be a factor in studying abroad, and we strive to assist you in finding affordable universities that align with your financial resources.
     <br/>`,
@@ -70,19 +70,19 @@ export const helpContent = [
   },
   {
     title: "Scholarship and Accommodation Arrangement",
-    content: `At British AUC's Free Application Centre, we are committed to helping Nigerian students secure scholarships, whether they are need-based or athletic scholarships. We have established partnerships with institutions that offer generous scholarships, discounts, or bursaries.
+    content: `At British AUC's Application Centre, we are committed to helping Nigerian students secure scholarships, whether they are need-based or athletic scholarships. We have established partnerships with institutions that offer generous scholarships, discounts, or bursaries.
 <br/>
 Additionally, we assist every student in finding high-quality accommodation options, ranging from university residential halls to private accommodations and host families, relieving students and parents from the stress of securing suitable housing near their chosen university.`,
     image: "/03.webp"
   },
   {
     title: "Passport, Visa and Travel Services",
-    content: `Our dedicated team provides extensive assistance with essential travel documents and services. Whether you need assistance with procuring or renewing your international passport or require guidance with visitor visa applications or renewals for parents accompanying their child, we are here to support you throughout the process, ensuring a smooth and hassle-free travel experience.`,
+    content: `Our dedicated team provides extensive assistance with essential travel documents and services. Whether you need assistance with procuring or renewing your international passport or require guidance with visitor visa applications or renewals for parents accompanying their child, we are here to support you throughout the process, ensuring a smooth travel experience.`,
     image: "/04.webp"
   },
   {
     title: "Liaising with University Officials and Pre-Departure Support",
-    content: `British AUC's Free Application Centre regularly hosts officials from renowned universities and colleges at our application centers. This unique opportunity allows students and parents to interact directly with representatives from various countries, gaining valuable firsthand information about their study plans.
+    content: `British AUC's Application Centre regularly hosts officials from renowned universities and colleges at our application centers. This unique opportunity allows students and parents to interact directly with representatives from various countries, gaining valuable firsthand information about their study plans.
 <br/>
 Moreover, we provide pre-departure support, equipping students with vital information about transportation systems, climates, time zones, laws, cultures, money matters, and other important aspects of their chosen study destination, ensuring a well-prepared transition.
 `,
@@ -90,7 +90,7 @@ Moreover, we provide pre-departure support, equipping students with vital inform
   },
   {
     title: "Ongoing Support while studying",
-    content: `Our commitment to your success extends beyond your departure. Throughout your study journey, British AUC's Free Application Centre remains dedicated to providing continuous support and assistance.<br/> We are here to help you navigate any challenges, ensuring a smooth integration into your chosen college or university community. We strive to ensure that you have all the necessary help and resources to thrive academically and personally.
+    content: `Our commitment to your success extends beyond your departure. Throughout your study journey, British AUC's Application Centre remains dedicated to providing continuous support and assistance.<br/> We are here to help you navigate any challenges, ensuring a smooth integration into your chosen college or university community. We strive to ensure that you have all the necessary help and resources to thrive academically and personally.
 `,
     image: "/06.webp"
   }
@@ -138,7 +138,7 @@ export const why = [
     {
         key: 1,
         image: "/w1.svg",
-        content: "We support your admission and visa application for wholly free of charge, No hidden and processing fee applied."
+        content: "We support your admission and visa application."
     },
     {
         key: 2,

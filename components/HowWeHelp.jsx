@@ -16,7 +16,7 @@ const HowWeHelp = ({page}) => {
 
           {page && (
             <p className='text-xs sm:text-sm md:text-[12.8px] leading-relaxed sm:leading-[2] md:leading-[2.4] mb-8 sm:mb-10 md:mb-12 mt-4 text-center max-w-4xl mx-auto'>
-              BRITISH AUC promises to offer a range of exceptional services tailored to meet your study abroad needs. Our expert team provides free visa and admission application support to universities worldwide. We will guide you through the intricate process, ensuring a seamless experience. Additionally, we offer up-to-date information on universities, scholarships, accommodations, and pre-departure assistance. Our personalized approach and proven track record will empower you to make informed decisions and embark on an exciting journey towards academic success and personal growth. Trust BRITISH AUC to make your study abroad dreams a reality.
+              BRITISH AUC promises to offer a range of exceptional services tailored to meet your study abroad needs. Our expert team provides visa and admission application support to universities worldwide. We will guide you through the intricate process, ensuring a seamless experience. Additionally, we offer up-to-date information on universities, scholarships, accommodations, and pre-departure assistance. Our personalized approach and proven track record will empower you to make informed decisions and embark on an exciting journey towards academic success and personal growth. Trust BRITISH AUC to make your study abroad dreams a reality.
             </p>
           )}
         </div>

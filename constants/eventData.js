@@ -125,7 +125,7 @@ export const studyTour2024 = {
         { date: "25th September, 2024", activity: "Depart for Abuja, FCT", location: "Abuja, FCT", meetingPoint: "The Envoy Hotel, 305 Diplomatic Dr, Central Business District, Abuja 900103, FCT" },
         { date: "26th September, 2024", activity: "Depart for Benin City, Edo\nArrive Benin City, Edo", location: "", meetingPoint: "Protea Hotel by Marriott, 4 Central Road, Off Sapele Road, Edo State, Benin City" },
         { date: "27th September, 2024", activity: "Education Fair Benin City", location: "Benin City, Edo State", meetingPoint: "Protea Hotel by Marriott, 4 Central Road, Off Sapele Road, Edo State, Benin City" },
-        { date: "28th September, 2024", activity: "Free Day", location: "Benin City, Edo State", meetingPoint: "Protea Hotel by Marriott, 4 Central Road, Off Sapele Road, Edo State, Benin City" },
+        { date: "28th September, 2024", activity: "Leisure Day", location: "Benin City, Edo State", meetingPoint: "Protea Hotel by Marriott, 4 Central Road, Off Sapele Road, Edo State, Benin City" },
         { date: "29th September, 2024", activity: "Depart for Abuja\nArrive Abuja", location: "", meetingPoint: "The Envoy Hotel, 305 Diplomatic Dr, Central Business District, Abuja 900103, FCT" },
         { date: "30th September, 2024", activity: "Lead British Secondary School, Gwarimpa, Funtaj International School, Gudu, and the Centagon International School, Maitaima", location: "Abuja, FCT", meetingPoint: "The Envoy Hotel, 305 Diplomatic Dr, Central Business District, Abuja 900103, FCT" },
         { date: "1st October, 2024", activity: "Premiere Academy, Lugbe, Pacesetters College, Wuye, Stella Maris College, Life Camp", location: "Abuja, FCT", meetingPoint: "The Envoy Hotel, 305 Diplomatic Dr, Central Business District, Abuja 900103, FCT" },
@@ -137,7 +137,7 @@ export const studyTour2024 = {
         { date: "7th October, 2024", activity: "Education Fair, Enugu", location: "Enugu, Enugu State", meetingPoint: "Carlton Swiss Grand Hotel 47b Nza St, Independence Layout, Enugu 400102, Enugu" },
         { date: "8th October, 2024", activity: "Depart for Abuja, FCT to Uyo, Akwa Ibom", location: "Uyo, Akwa Ibom", meetingPoint: "Ibom Icon Hotel & Golf Resort 520106 Nwaniba Road, Uyo 520106, Akwa Ibom" },
         { date: "9th October, 2024", activity: "Education Fair, Uyo (END OF STUDY TOUR)", location: "Uyo, Akwa Ibom State", meetingPoint: "Ibom Icon Hotel & Golf Resort 520106 Nwaniba Road, Uyo 520106, Akwa Ibom" },
-        { date: "10th October, 2024", activity: "Free Day (Sight Seeing of the Gulf Resort & the Marina)\nDinner Party at Marina, Ibom Icon Hotel & Golf Resort, Uyo", location: "Uyo, Akwa Ibom State", meetingPoint: "Ibom Icon Hotel & Golf Resort 520106 Nwaniba Road, Uyo 520106, Akwa Ibom" }
+        { date: "10th October, 2024", activity: "Leisure Day (Sight Seeing of the Gulf Resort & the Marina)\nDinner Party at Marina, Ibom Icon Hotel & Golf Resort, Uyo", location: "Uyo, Akwa Ibom State", meetingPoint: "Ibom Icon Hotel & Golf Resort 520106 Nwaniba Road, Uyo 520106, Akwa Ibom" }
     ],
     fees: [
         { city: "Lagos", fee: "£1,025" },
@@ -271,11 +271,11 @@ export const studyTour2025 = {
         { date: "24th September, 2025", activity: "Depart for Kano, Kano Via Abuja/Lagos Airport", location: "Kano, Kano State", meetingPoint: "Bristol Palace Hotel, Kano", remark: "Travel Day\nOvernight @ Bristol Palace Hotel, Kano" },
         { date: "25th September, 2025", activity: "Lebanon School Fair, Kano, Kano State", location: "Kano, Kano State", meetingPoint: "Bristol Palace Hotel, Kano", remark: "2pm to 4pm: Lebanon Fair\nOvernight @ Bristol Palace Hotel, Kano" },
         { date: "26th September, 2025", activity: "Education Fair, Kano", location: "Bristol Palace Hotel, Kano", meetingPoint: "Depart for Abuja @ Evening", remark: "10:00am – 02:00pm\nOvernight @ The Envoy Hotel, Abuja" },
-        { date: "27th September, 2025", activity: "Depart for Abuja, FCT", location: "Abuja, FCT", meetingPoint: "The Envoy Hotel, Abuja", remark: "Free Day\nOvernight @ The Envoy Hotel, Abuja" },
-        { date: "28th September, 2025", activity: "Free Day", location: "Abuja, FCT", meetingPoint: "The Envoy Hotel, Abuja", remark: "Free\nOvernight @ The Envoy Hotel, Abuja" },
+        { date: "27th September, 2025", activity: "Depart for Abuja, FCT", location: "Abuja, FCT", meetingPoint: "The Envoy Hotel, Abuja", remark: "Leisure Day\nOvernight @ The Envoy Hotel, Abuja" },
+        { date: "28th September, 2025", activity: "Leisure Day", location: "Abuja, FCT", meetingPoint: "The Envoy Hotel, Abuja", remark: "Leisure\nOvernight @ The Envoy Hotel, Abuja" },
         { date: "29th September, 2025", activity: "Funtaj International School, Gudu/The Centagon International School, Maitama/Capital Science Academy, Kado", location: "Abuja, FCT", meetingPoint: "The Envoy Hotel, Abuja", remark: "10:00: Funtaj School, Gudu\n12:00: The Centagon, Maitama\n14:00: Capital Science, Kado\nOvernight @ The Envoy Hotel, Abuja" },
         { date: "30th September, 2025", activity: "Premiere Academy, Lugbe/Pacesetters College, Wuye, Stella Maris College, Life-Camp", location: "Abuja, FCT", meetingPoint: "The Envoy Hotel, Abuja", remark: "10:00: Premiere Academy\n12:00: Pacesetters, Wuye\n14:00: Stella Maris, Life-Camp\nOvernight @ The Envoy Hotel, Abuja" },
-        { date: "1st October, 2025", activity: "Free Day (Independence Day)", location: "Abuja, FCT", meetingPoint: "The Envoy Hotel, Abuja", remark: "Free Day\nOvernight @ The Envoy Hotel, Abuja" },
+        { date: "1st October, 2025", activity: "Public Holiday (Independence Day)", location: "Abuja, FCT", meetingPoint: "The Envoy Hotel, Abuja", remark: "Leisure Day\nOvernight @ The Envoy Hotel, Abuja" },
         { date: "2nd October, 2025", activity: "Lead British Secondary School, Gwarimpa/Starville Secondary School, Jahi/Cherryfield College, Jikwoyi\nEnd of Study Tour 2025", location: "Abuja, FCT", meetingPoint: "The Envoy Hotel, Abuja", remark: "10:00: Lead British, Gwarimpa\n12:00: Starville Secondary,Jahi\n14:00: Cherryfield College,jikwoyi\nOvernight @ The Envoy Hotel, Abuja" }
     ],
     fees: [
