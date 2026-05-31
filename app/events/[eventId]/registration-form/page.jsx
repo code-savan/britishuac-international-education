@@ -1,7 +1,6 @@
 import { eventList } from '@/constants';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import Footer from '@/components/Footer';
 
 export async function generateStaticParams() {
   // Get the list of event IDs from your constants
@@ -54,8 +53,6 @@ export default function RegistrationForm({ params }) {
           </p>
         </div>
       </div>
-      <Footer />
-
       {/* Client-side redirect script */}
       <script dangerouslySetInnerHTML={{
         __html: `

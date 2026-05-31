@@ -7,7 +7,6 @@ import React, { useRef, useEffect } from 'react'
 const Testimonial = () => {
   const sliderRef = useRef(null);
 
-  // Add touch sliding functionality for mobile
   useEffect(() => {
     const slider = sliderRef.current;
     if (!slider) return;
@@ -16,104 +15,49 @@ const Testimonial = () => {
     let startX;
     let scrollLeft;
 
-    const handleMouseDown = (e) => {
-      isDown = true;
-      slider.classList.add('active');
-      startX = e.pageX - slider.offsetLeft;
-      scrollLeft = slider.scrollLeft;
+    const handlers = {
+      mousedown: (e) => { isDown = true; slider.classList.add('active'); startX = e.pageX - slider.offsetLeft; scrollLeft = slider.scrollLeft; },
+      mouseleave: () => { isDown = false; slider.classList.remove('active'); },
+      mouseup: () => { isDown = false; slider.classList.remove('active'); },
+      mousemove: (e) => { if (!isDown) return; e.preventDefault(); const x = e.pageX - slider.offsetLeft; slider.scrollLeft = scrollLeft - (x - startX) * 2; },
+      touchstart: (e) => { isDown = true; startX = e.touches[0].pageX - slider.offsetLeft; scrollLeft = slider.scrollLeft; },
+      touchend: () => { isDown = false; },
+      touchmove: (e) => { if (!isDown) return; const x = e.touches[0].pageX - slider.offsetLeft; slider.scrollLeft = scrollLeft - (x - startX) * 2; },
     };
 
-    const handleMouseLeave = () => {
-      isDown = false;
-      slider.classList.remove('active');
-    };
-
-    const handleMouseUp = () => {
-      isDown = false;
-      slider.classList.remove('active');
-    };
-
-    const handleMouseMove = (e) => {
-      if (!isDown) return;
-      e.preventDefault();
-      const x = e.pageX - slider.offsetLeft;
-      const walk = (x - startX) * 2; // Adjust scroll speed
-      slider.scrollLeft = scrollLeft - walk;
-    };
-
-    const handleTouchStart = (e) => {
-      isDown = true;
-      startX = e.touches[0].pageX - slider.offsetLeft;
-      scrollLeft = slider.scrollLeft;
-    };
-
-    const handleTouchMove = (e) => {
-      if (!isDown) return;
-      const x = e.touches[0].pageX - slider.offsetLeft;
-      const walk = (x - startX) * 2;
-      slider.scrollLeft = scrollLeft - walk;
-    };
-
-    slider.addEventListener('mousedown', handleMouseDown);
-    slider.addEventListener('mouseleave', handleMouseLeave);
-    slider.addEventListener('mouseup', handleMouseUp);
-    slider.addEventListener('mousemove', handleMouseMove);
-    slider.addEventListener('touchstart', handleTouchStart);
-    slider.addEventListener('touchend', handleMouseUp);
-    slider.addEventListener('touchmove', handleTouchMove);
-
-    return () => {
-      slider.removeEventListener('mousedown', handleMouseDown);
-      slider.removeEventListener('mouseleave', handleMouseLeave);
-      slider.removeEventListener('mouseup', handleMouseUp);
-      slider.removeEventListener('mousemove', handleMouseMove);
-      slider.removeEventListener('touchstart', handleTouchStart);
-      slider.removeEventListener('touchend', handleMouseUp);
-      slider.removeEventListener('touchmove', handleTouchMove);
-    };
+    Object.entries(handlers).forEach(([event, handler]) => slider.addEventListener(event, handler, { passive: event !== 'mousemove' && event !== 'touchmove' }));
+    return () => Object.entries(handlers).forEach(([event, handler]) => slider.removeEventListener(event, handler));
   }, []);
 
   return (
-    <div className='px-[20px] md:px-[60px] pb-16'>
-      <p className='text-[28px] sm:text-[32px] font-semibold text-center mb-6 sm:mb-10'>
-        Our students <span className='text-[26px] sm:text-[29px]'> share <br /> their </span> success <br /> stories..
-      </p>
+    <section className="bg-[#FAFAFA] py-20 lg:py-28">
+      <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
+        <h2 className="text-[clamp(2rem,4vw,3.25rem)] font-bold text-[#0A1628] tracking-[-0.02em] text-center mb-4">
+          Our students <span className="text-[#0066FF]">share</span> their success stories
+        </h2>
+        <p className="text-center text-[#8A9AB0] mb-12 lg:mb-16">Real moments from real journeys</p>
 
-      <div className="relative">
-        {/* Mobile indicator */}
-        <div className="flex justify-center mb-4 md:hidden">
-          <div className="h-1 w-16 bg-gray-200 rounded-full relative">
-            <div className="absolute h-1 w-4 bg-blue-500 rounded-full left-0"></div>
-          </div>
-        </div>
-
-        {/* Slider container */}
         <div
           ref={sliderRef}
-          className="flex md:justify-between md:px-10 gap-4 sm:gap-6 md:gap-10 overflow-x-auto scrollbar-hide snap-x snap-mandatory touch-pan-x"
-          style={{
-            scrollbarWidth: 'none',
-            msOverflowStyle: 'none',
-            WebkitOverflowScrolling: 'touch'
-          }}
+          className="flex gap-6 lg:gap-8 overflow-x-auto scrollbar-hide snap-x snap-mandatory touch-pan-x pb-4"
+          style={{ scrollbarWidth: 'none', msOverflowStyle: 'none', WebkitOverflowScrolling: 'touch' }}
         >
           {testimonials.map((item) => (
-            <div
-              className='min-w-[280px] sm:min-w-[300px] w-[85vw] sm:w-[350px]  flex-shrink-0 h-[350px] sm:h-[400px] relative bg-none snap-start'
-              key={item.key}
-            >
-              <Image
-                src={item.image}
-                className='object-cover rounded-[20px]'
-                alt={`Testimonial from student ${item.key}`}
-                fill
-                sizes="(max-width: 640px) 85vw, (max-width: 768px) 350px, 300px"
-              />
+            <div key={item.key} className="min-w-[300px] sm:min-w-[350px] w-[85vw] flex-shrink-0 snap-start relative">
+              <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300">
+                <Image
+                  src={item.image}
+                  className="object-cover"
+                  alt={`Testimonial from student ${item.key}`}
+                  fill
+                  sizes="(max-width: 640px) 85vw, 350px"
+                />
+              </div>
             </div>
           ))}
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

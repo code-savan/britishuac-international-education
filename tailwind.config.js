@@ -8,21 +8,22 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-  	extend: {
+    extend: {
         fontFamily: {
-            poppins: ['var(--font-poppins)', 'sans-serif'],
+            sans: ['var(--font-open-sans)', 'sans-serif'],
+            display: ['var(--font-rubik)', 'sans-serif'],
+            serif: ['var(--font-merriweather)', 'Georgia', 'serif'],
           },
-  		colors: {
-  			background: 'var(--background)',
-  			foreground: 'var(--foreground)'
-  		},
-  		borderRadius: {
-  			lg: 'var(--radius)',
-  			md: 'calc(var(--radius) - 2px)',
-  			sm: 'calc(var(--radius) - 4px)'
-  		}
-  	}
+        keyframes: {
+          marquee: {
+            '0%': { transform: 'translateX(0)' },
+            '100%': { transform: 'translateX(-50%)' },
+          },
+        },
+        animation: {
+          marquee: 'marquee 40s linear infinite',
+        },
+    }
   },
   plugins: [require("tailwindcss-animate")],
 };
-// export default config;

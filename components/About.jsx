@@ -1,69 +1,83 @@
 import Image from 'next/image'
 import React from 'react'
 import Link from 'next/link'
+import { Headset, ArrowRight } from 'lucide-react'
 
 const About = ({about}) => {
   return (
-    <div className='bg-[#f6f6f6] w-full px-5 sm:px-[20px] md:px-[60px] lg:px-[180px] py-10 sm:py-12 md:py-16'>
-        {
-            about ?
-            <h2 className='font-poppins text-2xl sm:text-3xl md:text-[36px] font-semibold text-center mb-4 sm:mb-6 md:mb-8'>Meet <span className='text-[#017ffe]'>British AUC</span></h2>
-            :
-            <h2 className='font-poppins text-2xl sm:text-3xl md:text-[2.5rem] font-semibold text-center mb-4 sm:mb-6 md:mb-8'>Who We Are</h2>
-        }
-
-        <div className="flex flex-col lg:flex-row w-full gap-6 lg:gap-4">
-            {/* Image section - full width on mobile, half on desktop */}
-            <div className="w-full lg:w-1/2 p-3 sm:p-6 md:p-8 lg:p-10 rounded-md">
-                <Image
-                    src={"/about.webp"}
-                    alt='about'
-                    className='rounded-[10px] shadow-sm w-full h-auto'
-                    width={550}
-                    height={500}
-                    priority
-                />
-            </div>
-
-            {/* Text section - full width on mobile, half on desktop */}
-            <div className="w-full lg:w-1/2 py-4 sm:py-6 md:py-8 lg:py-10 space-y-4 sm:space-y-5">
-                {
-                    about ?
-                    <p className='text-sm sm:text-base'>
-                        <span className='font-semibold'>BRITISH AUC</span> is a leading organization that offers comprehensive support for students aspiring to study abroad. Our expert team assists students throughout the entire process, providing visa and admission application services to universities worldwide. With a proven track record, we have successfully guided thousands of students to renowned universities and colleges across the globe.
-                    </p>
-                    :
-                    <p className='text-sm sm:text-base'>
-                        <span className='font-semibold'>BRITISH AUC</span> is a Visa and Admission Application Centre that support admission and visa application to universities and countries around the world.
-                    </p>
-                }
-
-                {
-                    about ?
-                    <p className='text-sm sm:text-base'>
-                        We offer a one-stop shop, providing up-to-date information on universities, scholarships, accommodations, and pre-departure support. Our personalized guidance ensures a seamless and smooth experience. At <span className='font-semibold text-slate-800'>BRITISH AUC</span>, we are committed to helping students make informed decisions, unlock their potential, and embark on a transformative journey towards a brighter future.
-                    </p>
-                    :
-                    <p className='text-sm sm:text-base'>
-                        <span className='font-semibold'>BRITISH AUC&apos;s</span> Application Centre is a one-stop shop for all your study abroad support services. Our application centres have helped thousands of international students study in universities and colleges in the UK, USA, Canada, Australia, Ireland, Germany, Turkey, Cyprus, etc.
-                    </p>
-                }
-
-                <div className="pt-2 sm:pt-4 flex gap-4">
-                    <Link href="/international-education/contact">
-                        <button className='flex items-center justify-center bg-[#007fff] px-6 py-3 rounded-[10px] font-bold text-white text-sm sm:text-[14px] w-full sm:w-auto sm:min-w-[180px]'>
-                            Speak to an Advisor
-                        </button>
-                    </Link>
-                    <Link href="/international-education/about">
-                        <button className='flex items-center justify-center bg-white border border-[#007fff] px-6 py-3 rounded-[10px] font-bold text-[#007fff] text-sm sm:text-[14px] w-full sm:w-auto sm:min-w-[180px]'>
-                            Learn More
-                        </button>
-                    </Link>
-                </div>
-            </div>
+    <section className="bg-white py-24 lg:py-32">
+      <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
+        <div className="max-w-[55ch] mb-16 lg:mb-20">
+          <h2 className="font-display text-[clamp(2.25rem,5vw,3.75rem)] font-bold text-[#0A1628] tracking-[-0.03em] text-balance leading-[1.05]">
+            {about ? "Meet " : "Who We "}
+            <span className="text-[#0066FF]">{about ? "British AUC" : "Are"}</span>
+          </h2>
+          <div className="w-16 h-px bg-[#0066FF] mt-6" />
         </div>
-    </div>
+
+        <div className="grid lg:grid-cols-2 gap-14 lg:gap-20 items-start">
+          <div className="space-y-7">
+            {about ? (
+              <>
+                <p className="text-[15px] sm:text-base text-[#5A6A82] leading-[1.75]">
+                  <span className="font-semibold text-[#0A1628]">BRITISH AUC</span> is a leading organization that offers comprehensive support for students aspiring to study abroad. Our expert team assists students throughout the entire process, providing visa and admission application services to universities worldwide. With a proven track record, we have successfully guided thousands of students to renowned universities and colleges across the globe.
+                </p>
+                <p className="text-[15px] sm:text-base text-[#5A6A82] leading-[1.75]">
+                  We offer a one-stop shop, providing up-to-date information on universities, scholarships, accommodations, and pre-departure support. Our personalized guidance ensures a seamless and smooth experience. At <span className="font-semibold text-[#0A1628]">BRITISH AUC</span>, we are committed to helping students make informed decisions, unlock their potential, and embark on a transformative journey towards a brighter future.
+                </p>
+              </>
+            ) : (
+              <>
+                <p className="text-[15px] sm:text-base text-[#5A6A82] leading-[1.75]">
+                  <span className="font-semibold text-[#0A1628]">BRITISH AUC</span> is a Visa and Admission Application Centre that support admission and visa application to universities and countries around the world.
+                </p>
+                <p className="text-[15px] sm:text-base text-[#5A6A82] leading-[1.75]">
+                  <span className="font-semibold text-[#0A1628]">BRITISH AUC&apos;s</span> Application Centre is a one-stop shop for all your study abroad support services. Our application centres have helped thousands of international students study in universities and colleges in the UK, USA, Canada, Australia, Ireland, Germany, Turkey, Cyprus, etc.
+                </p>
+              </>
+            )}
+
+            <div className="border-l-2 border-[#0066FF] pl-5 py-1 my-8">
+              <span className="font-display text-[2.5rem] font-bold text-[#1a56ff] leading-none">14+</span>
+              <p className="text-[13px] text-[#6B7D9B] uppercase tracking-[0.06em] mt-1.5">Years of excellence in education consulting</p>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link href="/contact">
+                <button className="w-full sm:w-auto px-8 py-3.5 bg-[#1a56ff] text-white font-semibold text-[15px] hover:bg-[#1447d1] transition-colors active:scale-[0.98] cursor-pointer flex items-center justify-center gap-2.5">
+                  <Headset size={16} />
+                  Speak to an Advisor
+                </button>
+              </Link>
+              <Link href="/about">
+                <button className="w-full sm:w-auto px-8 py-3.5 border border-[#0A1628] text-[#0A1628] font-semibold text-[15px] hover:bg-[#0A1628] hover:text-white transition-colors active:scale-[0.98] cursor-pointer flex items-center justify-center gap-2.5">
+                  <ArrowRight size={16} />
+                  Learn More
+                </button>
+              </Link>
+            </div>
+          </div>
+
+          
+          <div className="relative">
+            <div className="relative">
+              <Image
+                src="/about.webp"
+                alt="About British AUC"
+                width={550}
+                height={500}
+                className="w-full h-auto"
+                priority
+              />
+              <div className="absolute bottom-0 left-0 right-0 h-1/4 bg-gradient-to-t from-white to-transparent pointer-events-none" />
+            </div>
+            <div className="absolute -bottom-5 -left-5 w-16 h-16 border border-[#1a56ff]/30 hidden lg:block" />
+          </div>
+
+          
+        </div>
+      </div>
+    </section>
   )
 }
 

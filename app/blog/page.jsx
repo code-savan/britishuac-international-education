@@ -1,49 +1,144 @@
 import React from 'react'
-import Footer from '@/components/Footer'
 import { blogs } from '@/constants'
 import Link from 'next/link'
+import Image from 'next/image'
+import { ArrowRight, Calendar, User, Clock } from 'lucide-react'
 
-const page = () => {
+const POSTS_PER_PAGE = 6
+
+const Page = () => {
+  const featured = blogs[0]
+  const remaining = blogs.slice(1)
+
   return (
     <div>
-        <div className='blog_header relative flex items-center justify-center'>
-            {/* <div className='absolute w-[80%] h-20 bg-white rounded-[20px] top-[80px]'>
-
-            </div> */}
-
-            <p className='text-[24px] sm:text-[30px] md:text-[36px] font-semibold capitalize text-white'>All blogs</p>
+      {/* Hero */}
+      <section className="relative bg-white pt-16 lg:pt-[150px] overflow-hidden">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
+          <div className="py-14 md:py-16">
+            <div className="max-w-[55ch]">
+              <p className="text-[13px] font-semibold text-[#0066FF] uppercase tracking-[0.1em] mb-4">Our Blog</p>
+              <h1 className="font-display text-[clamp(2.5rem,6vw,4.5rem)] font-bold text-[#0A1628] leading-[1.05] tracking-[-0.03em] mb-6 text-balance">
+                Latest <span className="text-[#0066FF]">Articles</span>
+              </h1>
+              <p className="text-[16px] sm:text-[17px] text-[#5A6A82] leading-relaxed" style={{ maxWidth: '48ch' }}>
+                Insights, guides, and updates for Nigerian students aspiring to study abroad.
+              </p>
+            </div>
+          </div>
         </div>
+      </section>
 
-        <div className='px-4 sm:px-6 md:px-[40px] lg:px-[80px] py-6 sm:py-8 md:py-[50px] flex flex-wrap gap-4 sm:gap-8 md:gap-12 lg:gap-16 justify-center hover:cursor-pointer'>
-                {
-                    blogs.map((item) => (
-                      <Link key={item.key} href={`/blog/${item.key}`}>
-                        <div className="w-full sm:w-[300px] md:w-[320px] lg:w-[350px]">
-                          <article className="overflow-hidden rounded-lg shadow transition hover:shadow-lg">
-                            <img
-                              alt={item.title}
-                              src={item.image}
-                              className="h-48 sm:h-52 md:h-56 w-full object-cover"
-                            />
+      {/* Featured Post */}
+      {featured && (
+        <section className="bg-[#FAFAFA]">
+          <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 pb-8">
+            <Link href={featured.link} className="group block">
+              <div className="relative bg-white border border-[#E8ECF0] hover:border-[#1a56ff] transition-colors duration-200 overflow-hidden">
+                <div className="grid md:grid-cols-12 min-h-[360px]">
+                  <div className="md:col-span-7 relative min-h-[240px] md:min-h-full overflow-hidden">
+                    <Image
+                      src={featured.image}
+                      alt={featured.title}
+                      fill
+                      className="object-cover transition-transform duration-700 group-hover:scale-105"
+                      priority
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-r from-[#0A1628]/60 to-transparent hidden md:block" />
+                  </div>
+                  <div className="md:col-span-5 p-8 lg:p-10 xl:p-12 flex flex-col justify-center bg-white">
+                    <span className="text-[10px] font-bold text-[#0066FF] uppercase tracking-[0.12em] mb-3">Featured Article</span>
+                    <h2 className="font-display text-[clamp(1.25rem,2.5vw,1.75rem)] font-bold text-[#0A1628] leading-[1.15] tracking-[-0.02em] mb-4 group-hover:text-[#0066FF] transition-colors duration-200">
+                      {featured.title}
+                    </h2>
+                    {featured.excerpt && (
+                      <p className="text-[14px] text-[#5A6A82] leading-relaxed mb-5 line-clamp-3">
+                        {featured.excerpt}
+                      </p>
+                    )}
+                    <div className="flex items-center gap-4 mb-5">
+                      <span className="flex items-center gap-1.5 text-[12px] text-[#6B7D9B]">
+                        <Calendar size={13} />
+                        {featured.date}
+                      </span>
+                      <span className="w-px h-3 bg-[#D0D5DD]" />
+                      <span className="flex items-center gap-1.5 text-[12px] text-[#6B7D9B]">
+                        <User size={13} />
+                        {featured.author}
+                      </span>
+                      <span className="w-px h-3 bg-[#D0D5DD]" />
+                      <span className="flex items-center gap-1.5 text-[12px] text-[#6B7D9B]">
+                        <Clock size={13} />
+                        5 min read
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-1.5 text-[13px] font-semibold text-[#1a56ff] group-hover:gap-2.5 transition-all duration-200">
+                      Read Full Article <ArrowRight size={14} />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Link>
+          </div>
+        </section>
+      )}
 
-                            <div className="bg-white p-3 sm:p-4 md:p-6">
-                              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
-                                <time datetime={item.date} className="block text-xs text-gray-500 font-semibold mb-1 sm:mb-0"> {item.date} </time>
-                                <p className='text-[12px] sm:text-[13px] md:text-[14px] font-semibold text-gray-500'>{item.author}</p>
-                              </div>
+      {/* Remaining Posts */}
+      <section className="bg-[#FAFAFA] pb-20 lg:pb-24">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
+          {remaining.length > 0 && (
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+              {remaining.map((post) => (
+                <Link key={post.key} href={post.link} className="group block">
+                  <div className="border border-[#E8ECF0] bg-white h-full flex flex-col hover:border-[#1a56ff] transition-colors duration-200">
+                    <div className="relative aspect-[16/10] overflow-hidden">
+                      <Image
+                        src={post.image}
+                        alt={post.title}
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      />
+                    </div>
+                    <div className="p-6 lg:p-7 flex flex-col flex-1">
+                      <div className="flex items-center gap-3 mb-3">
+                        <span className="text-[11px] text-[#6B7D9B] uppercase tracking-[0.05em]">{post.date}</span>
+                        <span className="w-px h-3 bg-[#D0D5DD]" />
+                        <span className="text-[11px] text-[#6B7D9B] uppercase tracking-[0.05em]">{post.author}</span>
+                      </div>
+                      <h3 className="text-[16px] font-bold text-[#0A1628] leading-snug group-hover:text-[#0066FF] transition-colors duration-200 flex-1">
+                        {post.title}
+                      </h3>
+                      {post.excerpt && (
+                        <p className="text-[13px] text-[#5A6A82] leading-relaxed mt-2 line-clamp-2">
+                          {post.excerpt}
+                        </p>
+                      )}
+                      <div className="flex items-center gap-1.5 mt-4 text-[13px] font-semibold text-[#1a56ff] group-hover:gap-2.5 transition-all duration-200">
+                        Read Article <ArrowRight size={14} />
+                      </div>
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          )}
 
-                              <h3 className="mt-2 text-base sm:text-lg text-gray-900 font-semibold">{item.title}</h3>
-                            </div>
-                          </article>
-                        </div>
-                      </Link>
-                    ))
-                }
+          {/* Pagination placeholder */}
+          {blogs.length > POSTS_PER_PAGE && (
+            <div className="mt-12 flex justify-center">
+              <nav className="inline-flex items-center gap-2">
+                <span className="px-4 py-2 border border-[#E8ECF0] text-[13px] font-semibold text-[#6B7D9B] bg-white">Page 1</span>
+                <Link href="/blog/page/2" className="px-4 py-2 border border-[#E8ECF0] text-[13px] font-semibold text-[#6B7D9B] hover:border-[#1a56ff] hover:text-[#1a56ff] transition-colors bg-white">
+                  Page 2
+                </Link>
+              </nav>
+            </div>
+          )}
         </div>
-
-        <Footer />
+      </section>
     </div>
   )
 }
 
-export default page
+export default Page

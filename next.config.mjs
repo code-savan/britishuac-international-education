@@ -6,12 +6,15 @@ const nextConfig = {
         unoptimized: true
     },
     eslint: {
-        // Warning: This allows production builds to successfully complete even if
-        // your project has ESLint errors.
         ignoreDuringBuilds: true,
     },
-    // Added trailingSlash option for better compatibility with static hosts
-    trailingSlash: true
+    trailingSlash: true,
+    webpack: (config, { dev }) => {
+        if (dev) {
+            config.cache = false
+        }
+        return config
+    },
 };
 
 export default nextConfig;

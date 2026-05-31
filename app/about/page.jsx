@@ -1,132 +1,151 @@
 import React from 'react'
-import About from '@/components/About'
-import CTA from '@/components/CTA'
+import WhyChooseUs from '@/components/WhyChooseUs'
+import Partners from '@/components/Partners'
+import FAQ from '@/components/FAQ'
+import CTABanner from '@/components/CTABanner'
 import Image from 'next/image'
-import { partners, why } from '@/constants'
+import Link from 'next/link'
+import { PhoneCall, Book } from 'lucide-react'
 
 const teamList = [
-    {
-        key: 1,
-        img: "/collins.png",
-        name: "Collins Onyeaji",
-        role: "Senior Director - Programmes"
-    },
-    {
-        key: 2,
-        img: "/vitalis.webp",
-        name: "Vitalis Nwaogu",
-        role: "Chairman - Board of Directors"
-    },
-    {
-        key: 3,
-        img: "/rachel.webp",
-        name: "Rachel Borland",
-        role: "Director - Business Partnerships"
-    },
-    {
-        key: 4,
-        img: "/david.png",
-        name: "David Hobson",
-        role: "Director - Quality Assurance"
-    },
-    {
-        key: 5,
-        img: "/doris.webp",
-        name: "Doris Okoro",
-        role: "Director - Visas & Compliance"
-    },
-    {
-        key: 6,
-        img: "/patience.webp",
-        name: "Patience Ikpor",
-        role: "Senior Manager - Recruitment"
-    },
+  {
+    key: 1,
+    img: "/collins.png",
+    name: "Collins Onyeaji",
+    role: "Senior Director - Programmes"
+  },
+  {
+    key: 2,
+    img: "/vitalis.webp",
+    name: "Vitalis Nwaogu",
+    role: "Chairman - Board of Directors"
+  },
+  {
+    key: 3,
+    img: "/rachel.webp",
+    name: "Rachel Borland",
+    role: "Director - Business Partnerships"
+  },
+  {
+    key: 4,
+    img: "/david.png",
+    name: "David Hobson",
+    role: "Director - Quality Assurance"
+  },
+  {
+    key: 5,
+    img: "/doris.webp",
+    name: "Doris Okoro",
+    role: "Director - Visas & Compliance"
+  },
+  {
+    key: 6,
+    img: "/patience.webp",
+    name: "Patience Ikpor",
+    role: "Senior Manager - Recruitment"
+  },
 ]
 
+const teamCards = [...teamList, ...teamList]
 
-const page = () => {
+const Page = () => {
   return (
     <div>
-        <div className='px-[20px] md:px-[60px] space-y-[80px]'>
-            <div>
-            <p className='font-poppins text-[36px] font-semibold text-center mb-4 mt-16'>Meet <span className='text-[#017ffe]'>British AUC</span> </p>
-
-            <div className='text-[12px] font-normal mb-24'>
-                <p>
-                BRITISH AUC is a leading organization that offers comprehensive support for students aspiring to study abroad. Our expert team assists students throughout the entire process, providing visa and admission application services to universities worldwide. With a proven track record, we have successfully guided thousands of students to renowned universities and colleges across the globe.
-                </p>
-                <br />
-                <p>
-                We offer a one-stop shop, providing up-to-date information on universities, scholarships, accommodations, and pre-departure support. Our personalized guidance ensures a seamless and smooth experience. At BRITISH AUC, we are committed to helping students make informed decisions, unlock their potential, and embark on a transformative journey towards a brighter future.
-                </p>
-            </div>
-            </div>
-
-            <div className='w-full'>
-            <p className='text-[36px] font-semibold text-center  mb-16'>Our <span className='text-[#017ffe]'>Team</span> </p>
-
-
-
-    {/* team  */}
-               <div className='w-full flex flex-wrap items-start gap-16 justify-center'>
-                {teamList.map((team) => (
-                    <div key={team.key} className='w-[280px]'>
-                        <div className='size-[280px] rounded-full mb-4 bg-[#f6f6f6] overflow-hidden'>
-                        <Image src={team.img} alt='' width={300} height={300} className='bg-bottom shadow-sm' />
-                        </div>
-
-                        <p className='mb-1 capitalize text-center font-bold text-[17px] w-[70%] mx-auto'>
-                        {team.role}
-                        </p>
-                        <p className='font-medium capitalize text-center text-[16px]'>
-                        {team.name}
-                        </p>
-                    </div>
-                ))}
-               </div>
-
-            </div>
-
-                {/* Why choose us  */}
-            <div>
-            <p className=' text-[36px] font-semibold text-center mb-16'>
-                Why choose our Application Center</p>
-
-                <div className='flex flex-wrap justify-center gap-16 w-full'>
-                    {
-                        why.map((item) => (
-                            <div key={item.key} className='w-[260px]'>
-                                <Image src={item.image} alt='image' className='mx-auto' width={40} height={40} />
-                                <p className='text-[12px] font-normal text-center mt-3'>{item.content}</p>
-                            </div>
-                        ))
-                    }
-                </div>
-            </div>
-
-             {/* partners  */}
-             <div>
-            <p className=' text-[36px] font-semibold text-center mb-8'>
-            OUR PARTNERS</p>
-        <div className='h-[2px] w-[80px] bg-red-700 mx-auto mb-16' />
-
-                <div className='flex flex-wrap justify-center gap-16 w-full items-center'>
-                    {
-                        partners.map((item) => (
-                            <div key={item.key} className=''>
-                                <Image src={item.image} alt='image' className='' width={130} height={130} />
-                            </div>
-                        ))
-                    }
-                </div>
-            </div>
-
+      <section className="relative bg-white min-h-[70vh] pt-16 lg:pt-[150px] overflow-hidden">
+        <div className="hidden md:block absolute right-0 top-16 lg:top-[170px] bottom-0 w-1/2">
+          <Image
+            src="/about.webp"
+            alt="British AUC team"
+            width={550}
+            height={500}
+            className="h-full w-full object-cover object-center"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-white" />
         </div>
-        <div className='mt-[180px]'>
-            <CTA />
+
+        <div className="relative max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 h-full">
+          <div className="flex items-center min-h-[calc(70vh-64px)] lg:min-h-[calc(70vh-150px)]">
+            <div className="w-full md:w-1/2 max-w-xl py-16 md:py-20">
+              <p className="text-[13px] font-semibold text-[#0066FF] uppercase tracking-[0.1em] mb-4">About Us</p>
+              <h1 className="font-display text-[clamp(2.5rem,6vw,4.5rem)] font-bold text-[#0A1628] leading-[1.05] tracking-[-0.03em] mb-6 text-balance">
+                Meet <span className="text-[#0066FF]">British AUC</span>
+              </h1>
+              <p className="text-[16px] sm:text-[17px] text-[#5A6A82] leading-relaxed mb-8" style={{ maxWidth: '48ch' }}>
+                We are a leading visa and admission application centre dedicated to helping Nigerian students achieve their dreams of studying at world-class universities across the globe.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link href="/contact">
+                  <button className="w-full sm:w-auto px-8 py-3.5 bg-[#1a56ff] text-white font-semibold text-[15px] hover:bg-[#1447d1] transition-colors active:scale-[0.98] cursor-pointer flex items-center justify-center gap-2.5">
+                    <Book size={16} />
+                    Speak to an Advisor
+                  </button>
+                </Link>
+                <a href="tel:+2348059000097">
+                  <button className="w-full sm:w-auto px-8 py-3.5 border border-[#0A1628] text-[#0A1628] font-semibold text-[15px] hover:bg-[#0A1628] hover:text-white transition-colors active:scale-[0.98] cursor-pointer flex items-center justify-center gap-2.5">
+                    <PhoneCall size={16} />
+                    Call Us
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
+
+        <div className="md:hidden w-full mt-8">
+          <Image
+            src="/about.webp"
+            alt="British AUC team"
+            width={550}
+            height={500}
+            className="w-full h-auto"
+            priority
+          />
+        </div>
+      </section>
+
+      <section className="bg-[#FAFAFA] py-24 lg:py-32 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
+          <div className="max-w-[55ch] mb-14 lg:mb-16">
+            <h2 className="font-display text-[clamp(2rem,4vw,3.25rem)] font-bold text-[#0A1628] tracking-[-0.03em] text-balance mb-4">
+              Our <span className="text-[#0066FF]">Team</span>
+            </h2>
+            <div className="w-12 h-px bg-[#0066FF] mb-5" />
+            <p className="text-[16px] text-[#5A6A82] leading-relaxed">
+              Meet the dedicated professionals behind British AUC.
+            </p>
+          </div>
+        </div>
+
+        <div className="relative">
+          <div className="flex overflow-hidden">
+            <div className="flex animate-marquee gap-6 lg:gap-8" style={{ width: "fit-content" }}>
+              {teamCards.map((member, i) => (
+                <div key={i} className="w-[220px] lg:w-[260px] flex-shrink-0">
+                  <div className="relative aspect-square overflow-hidden bg-[#F5F6F8] mb-4">
+                    <Image
+                      src={member.img}
+                      alt={member.name}
+                      fill
+                      className="object-cover object-top"
+                      sizes="260px"
+                    />
+                  </div>
+                  <p className="text-[12px] font-semibold text-[#0066FF] uppercase tracking-[0.06em] mb-0.5">{member.role}</p>
+                  <p className="text-[16px] font-bold text-[#0A1628]">{member.name}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <WhyChooseUs />
+      <Partners />
+      <FAQ />
+      <CTABanner />
     </div>
   )
 }
 
-export default page
+export default Page

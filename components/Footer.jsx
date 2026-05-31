@@ -5,154 +5,126 @@ import { Facebook, Instagram, Linkedin, Twitter } from 'lucide-react'
 
 const Footer = () => {
   return (
-    <div className='w-full bg-black text-white'>
-        <div className='px-4 sm:px-[20px] md:px-[60px] lg:px-[180px] py-[16px]'>
-        <footer className="pt-8 sm:pt-12">
-          <div className="container mx-auto flex flex-col lg:flex-row items-start justify-between gap-8 lg:gap-12 xl:gap-20">
-            {/* Logo and subscribe section */}
-            <div className="space-y-6 sm:space-y-8 w-full lg:w-5/12">
-              {/* Logo */}
-              <div>
-                <Image src="/logo.webp" alt="British AUC logo" className='w-[200px] h-auto sm:w-[300px] md:w-[400px] lg:w-[450px]' width={450} height={400} />
-                <p className='font-poppins text-[13px] sm:text-[15px] mt-2 mb-4 sm:mb-8 leading-tight'>Connect with Us for Vital Study Abroad Tips and Unlock Your Global Potential.</p>
+    <footer>
+      <div className="bg-[#0A1628] border-t border-white/10">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 py-16 lg:py-20">
+          <div className="grid lg:grid-cols-12 gap-12 lg:gap-16">
+            <div className="lg:col-span-4 space-y-6">
+              <Image
+                src="/logo.webp"
+                alt="British AUC"
+                width={180}
+                height={44}
+                className="w-[140px] sm:w-[180px] h-auto  opacity-90"
+              />
+              <p className="text-[#6B7D9B] text-sm leading-relaxed max-w-xs">
+                Connect with Us for Vital Study Abroad Tips and Unlock Your Global Potential.
+              </p>
+              <div className="flex gap-2">
+                {[
+                  { icon: Linkedin, label: 'LinkedIn', href: 'https://www.linkedin.com/company/british-auc/' },
+                  { icon: Facebook, label: 'Facebook', href: 'https://web.facebook.com/BritishAUC1/' },
+                  { icon: Instagram, label: 'Instagram', href: 'https://www.instagram.com/britishauc1/' },
+                  { icon: Twitter, label: 'Twitter', href: 'https://x.com/britishauc1/' },
+                  { icon: null, label: 'TikTok', href: 'https://www.tiktok.com/@british_auc/', isTikTok: true },
+                ].map(({ icon: Icon, label, href, isTikTok }) => (
+                  <Link
+                    key={label}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={label}
+                    className="w-9 h-9 bg-white/5 flex items-center justify-center hover:bg-[#0066FF] transition-all duration-200"
+                  >
+                    {isTikTok ? (
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="white" className="text-white/60">
+                        <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" />
+                      </svg>
+                    ) : (
+                      <Icon size={15} className="text-white/60" />
+                    )}
+                  </Link>
+                ))}
               </div>
+            </div>
 
-              {/* Subscribe */}
+            <div className="lg:col-span-5 grid grid-cols-2 gap-8">
               <div>
-                <div>
-                  <h3 className="font-bold text-[16px] sm:text-[18px] leading-snug mb-1">Subscribe to Our Newsletter</h3>
-                  <p className="text-[12px] sm:text-[13px] mb-2">Enter your email address to get first-hand updates, offers, and study abroad related updates</p>
-                </div>
-                <form className="space-y-2">
-                  <input
-                    type="email"
-                    placeholder="example@gmail.com"
-                    className="w-full px-3 py-2 sm:py-3 border border-gray-600 focus:outline-gray-700 focus:border-transparent text-white bg-transparent rounded-[15px] mb-2"
-                    required
-                  />
+                <h3 className="text-[11px] font-bold tracking-[0.12em] uppercase text-[#6B7D9B] mb-6">Company</h3>
+                <ul className="space-y-3">
+                  {[
+                    { href: '/about', label: 'Who We Are' },
+                    { href: '/services', label: 'Our Services' },
+                    { href: '/blog', label: 'Blogs' },
+                    { href: '/events', label: 'Events' },
+                    { href: '/contact', label: 'Contact Us' },
+                  ].map(({ href, label }) => (
+                    <li key={href}>
+                      <Link href={href} className="text-sm text-[#8A9AB0] hover:text-white transition-colors duration-200">
+                        {label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-[11px] font-bold tracking-[0.12em] uppercase text-[#6B7D9B] mb-6">Support</h3>
+                <ul className="space-y-3">
+                  {[
+                    { href: '/contact', label: 'Help Centre' },
+                    { href: '/faqs', label: 'FAQs' },
+                    { href: '/privacy', label: 'Privacy Policy' },
+                    { href: '/terms', label: 'Terms of Use' },
+                  ].map(({ href, label }) => (
+                    <li key={href}>
+                      <Link href={href} className="text-sm text-[#8A9AB0] hover:text-white transition-colors duration-200">
+                        {label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
 
-                  <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between w-full space-y-3 sm:space-y-0 sm:space-x-2">
-                    <div className='w-fit flex space-x-2 sm:space-x-3 items-start'>
-                      <input type="checkbox" id="terms" className="rounded-full text-purple-600 mt-1" required />
-                      <label htmlFor="terms" className="text-[10px] sm:text-xs">
-                        I agree with the{' '}
-                        <Link href="/terms" className="text-blue-400 underline">
-                          Term of Uses
-                        </Link>{' '} <br />
-                        and{' '}
-                        <Link href="/privacy" className="text-blue-400 underline">
-                          Privacy Policy.
-                        </Link>
-                      </label>
-                    </div>
-
-                    <button
-                      type="submit"
-                      className="bg-[#017ffe] text-white py-2 px-6 rounded-[25px] hover:bg-blue-600 transition duration-300 font-bold text-sm"
-                    >
-                      Submit
-                    </button>
+            <div className="lg:col-span-3 space-y-6">
+              <h3 className="text-[11px] font-bold tracking-[0.12em] uppercase text-[#6B7D9B]">Find Us</h3>
+              {[
+                { href: "https://maps.app.goo.gl/JMkDDmrpffF79Hyq7", address: "128 City Road, London, United Kingdom", src: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.2635280087934!2d-0.09081892337876156!3d51.526726171817735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761d64c8d91b11%3A0x8fd10f948b8c6ef5!2s128%20City%20Rd%2C%20London%20EC1V%202NX%2C%20UK!5e0!3m2!1sen!2sng!4v1729153840310!5m2!1sen!2sng" },
+                { href: "https://maps.app.goo.gl/SreHVgFx3ubhNUs16", address: "Kingfem GA247, Abuja, Nigeria", src: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3939.754554342161!2d7.456561375019561!3d9.086110190977537!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e0b929d261bc1%3A0xf87655077fcf6153!2sKINGFEM%20GA247!5e0!3m2!1sen!2sng!4v1729153977276!5m2!1sen!2sng" },
+              ].map((loc, i) => (
+                <div key={i}>
+                  <Link target="_blank" href={loc.href} className="text-sm text-[#8A9AB0] hover:text-white transition-colors duration-200 block mb-2">
+                    {loc.address}
+                  </Link>
+                  <div className="overflow-hidden border border-[#1A2A4A]">
+                    <iframe src={loc.src} width="100%" height="90" className="border-0" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
                   </div>
-                </form>
-              </div>
-            </div>
-
-            {/* Links sections */}
-            <div className='w-full lg:w-7/12 flex flex-col sm:flex-row flex-wrap justify-between gap-8 sm:gap-4'>
-              {/* Company links */}
-              <div className='w-full sm:w-1/2 md:w-1/3'>
-                <h3 className="font-bold text-base sm:text-lg mb-3 sm:mb-4">Company</h3>
-                <ul className="space-y-2 sm:space-y-4">
-                  <li><Link href="/about" className="hover:text-blue-600 text-sm sm:text-base">Who We Are</Link></li>
-                  <li><Link href="/services" className="hover:text-blue-600 text-sm sm:text-base">Our Promise</Link></li>
-                  <li><Link href="/blog" className="hover:text-blue-600 text-sm sm:text-base">Blog</Link></li>
-                  <li><Link href="/events" className="hover:text-blue-600 text-sm sm:text-base">Events</Link></li>
-                  <li><Link href="/careers" className="hover:text-blue-600 text-sm sm:text-base">Careers</Link></li>
-                  <li><Link href="/contact" className="hover:text-blue-600 text-sm sm:text-base">Contact Us</Link></li>
-                </ul>
-              </div>
-
-              {/* Legal links */}
-              <div className='w-full sm:w-1/2 md:w-1/3'>
-                <h3 className="font-bold text-base sm:text-lg mb-3 sm:mb-4">Legal</h3>
-                <ul className="space-y-2 sm:space-y-4">
-                  <li><Link href="/disclaimer" className="hover:text-blue-600 text-sm sm:text-base">Disclaimer</Link></li>
-                  <li><Link href="/privacy" className="hover:text-blue-600 text-sm sm:text-base">Privacy Policy</Link></li>
-                  <li><Link href="/terms" className="hover:text-blue-600 text-sm sm:text-base">Terms of Use</Link></li>
-                  <li><Link href="/faqs" className="hover:text-blue-600 text-sm sm:text-base">FAQs</Link></li>
-                </ul>
-              </div>
-
-              {/* Find Us */}
-              <div className='w-full md:w-1/3'>
-                <h3 className="font-bold text-base sm:text-lg mb-3 sm:mb-4">Find Us</h3>
-                <ul className="space-y-4">
-                  <li>
-                    <Link target='_blank' href="https://maps.app.goo.gl/JMkDDmrpffF79Hyq7" className="hover:text-blue-600 text-sm sm:text-base">
-                      128 City Road, London, United Kingdom
-                    </Link>
-                    <div className="w-full mt-2 overflow-hidden rounded-lg">
-                      <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.2635280087934!2d-0.09081892337876156!3d51.526726171817735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761d64c8d91b11%3A0x8fd10f948b8c6ef5!2s128%20City%20Rd%2C%20London%20EC1V%202NX%2C%20UK!5e0!3m2!1sen!2sng!4v1729153840310!5m2!1sen!2sng"
-                        width="100%"
-                        height="120"
-                        className="border-0"
-                        allowFullScreen=""
-                        loading="lazy"
-                        referrerPolicy="no-referrer-when-downgrade">
-                      </iframe>
-                    </div>
-                  </li>
-                  <li>
-                    <Link target='_blank' href="https://maps.app.goo.gl/SreHVgFx3ubhNUs16" className="hover:text-blue-600 text-sm sm:text-base">
-                      Kingfem GA247 Plot 264, Ahmadu Bello Express Way, Mabushi-Wuse 2, Abuja, FCT-Nigeria.
-                    </Link>
-                    <div className="w-full mt-2 overflow-hidden rounded-lg">
-                      <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3939.754554342161!2d7.456561375019561!3d9.086110190977537!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e0b929d261bc1%3A0xf87655077fcf6153!2sKINGFEM%20GA247!5e0!3m2!1sen!2sng!4v1729153977276!5m2!1sen!2sng"
-                        width="100%"
-                        height="120"
-                        className="border-0"
-                        allowFullScreen=""
-                        loading="lazy"
-                        referrerPolicy="no-referrer-when-downgrade">
-                      </iframe>
-                    </div>
-                  </li>
-                </ul>
-              </div>
+                </div>
+              ))}
             </div>
           </div>
-        </footer>
-      </div>
+        </div>
 
-      {/* Footer bottom with copyright and social links */}
-      <div className="mt-8 sm:mt-12 py-6 sm:py-8 border-t border-gray-800 flex flex-col sm:flex-row justify-between items-center px-4 sm:px-[20px] md:px-[60px] lg:px-[180px] gap-4">
-        <p className="text-xs sm:text-sm">© 2023 British AUC. All Rights Reserved</p>
-
-        {/* Socials */}
-        <div className='flex flex-col sm:flex-row items-center space-y-3 sm:space-y-0 sm:space-x-3'>
-          <div className='h-fit flex items-center space-x-1'>
-            <p className="font-poppins font-semibold text-[12px] sm:text-[13px] text-gray-200">Follow our socials</p>
-            <div className='hidden sm:block h-[15px] w-[2px] bg-slate-700 rounded-[6px]'></div>
-          </div>
-          <div className="flex space-x-3 sm:space-x-4">
-            <Link href="#" className="text-gray-200 hover:text-gray-400 p-[6px] bg-gray-800 rounded-[7px]">
-              <Linkedin size={18} />
-            </Link>
-            <Link href="#" className="text-gray-200 hover:text-gray-400 p-[6px] bg-gray-800 rounded-[7px]">
-              <Facebook size={18} />
-            </Link>
-            <Link href="#" className="text-gray-200 hover:text-gray-400 p-[6px] bg-gray-800 rounded-[7px]">
-              <Instagram size={18} />
-            </Link>
-            <Link href="#" className="text-gray-200 hover:text-gray-400 p-[6px] bg-gray-800 rounded-[7px]">
-              <Twitter size={18} />
-            </Link>
+        <div className="border-t border-[#1A2A4A]">
+          <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 py-6 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <p className="text-[#6B7D9B] text-xs sm:text-sm">&copy; 2023 British AUC. All Rights Reserved</p>
+            <div className="flex gap-6 text-xs sm:text-sm text-[#6B7D9B]">
+              <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
+              <Link href="/terms" className="hover:text-white transition-colors">Terms of Use</Link>
+              <Link href="/disclaimer" className="hover:text-white transition-colors">Disclaimer</Link>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+
+      <div className="bg-[#060E1A] border-t border-white/5">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 py-5">
+          <p className="text-[11px] text-[#4A5A72] leading-relaxed text-center">
+            Disclaimer: British AUC provides visa and admission application support services. While we maintain a 100% success rate, visa approvals are ultimately at the discretion of individual embassies and immigration authorities. We make no guarantees regarding specific outcomes. All information on this website is for general informational purposes only and does not constitute legal advice. Students are encouraged to verify all details directly with relevant institutions and authorities.
+          </p>
+        </div>
+      </div>
+    </footer>
   )
 }
 

@@ -1,62 +1,105 @@
 import React from 'react'
-import Footer from '@/components/Footer'
 import Image from 'next/image'
 import { eventList } from '@/constants'
 import Link from 'next/link'
+import { ArrowRight, Calendar, MapPin } from 'lucide-react'
 
-const page = () => {
+const Page = () => {
+  const showEvents = eventList.filter(item => item.showLink)
+  const currentYear = new Date().getFullYear()
+  const upcomingEvent = {
+    id: "upcoming-event",
+    key: "upcoming",
+    title: `British AUC Study Tour | ${currentYear + 1}`,
+    date: "TBD",
+    location: "Major States in Nigeria | Multiple High Profile International Secondary Schools",
+    shortDescription: "Explore, Learn, Experience; Join Our Study Tour!",
+  }
+
   return (
     <div>
-        <div className='px-4 sm:px-[20px] md:px-[60px] lg:px-[80px] pt-4 pb-12'>
-            <div className="events-header">
-                Events in Nigeria
+      {/* Hero */}
+      <section className="relative bg-white pt-16 lg:pt-[150px] overflow-hidden">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
+          <div className="py-16 md:py-20">
+            <div className="max-w-[55ch]">
+              <p className="text-[13px] font-semibold text-[#0066FF] uppercase tracking-[0.1em] mb-4">Discover</p>
+              <h1 className="font-display text-[clamp(2.5rem,6vw,4.5rem)] font-bold text-[#0A1628] leading-[1.05] tracking-[-0.03em] mb-6 text-balance">
+                Our <span className="text-[#0066FF]">Events</span>
+              </h1>
+              <p className="text-[16px] sm:text-[17px] text-[#5A6A82] leading-relaxed" style={{ maxWidth: '48ch' }}>
+                At our Nigeria events, you can meet university representatives and discuss your study prospects, campus life, and more in person.
+              </p>
             </div>
-
-            <p className='font-normal text-sm sm:text-[12.8px] mx-auto mt-6 sm:mt-[50px] w-full sm:w-[85%] md:w-[75%] text-center'>
-                At our Nigeria events, you can meet university representatives and discuss your study prospects, campus life, and more in person. You can also have your application assessed and submitted, if sufficient of course! Currently, we have one upcoming event in Nigeria. This event is the British AUC Study Tour 2025. The event is happening from <span className='font-semibold'>15th September 2025</span> to <span className='font-semibold'>2nd October 2025.</span> Register today with British AUC!
-            </p>
-
-            <div className="subheading">
-                <p className='font-bold text-xl sm:text-2xl md:text-[1.5rem]'>Showing events below</p>
-                <hr className="divider" />
-            </div>
-
-            <div className='px-2 sm:px-4 md:px-8 lg:px-[80px]'>
-                {/* events */}
-                <div className='event_container'>
-                    <div className="event_list">
-                    {
-                        eventList.map((item) => (
-                        <div className='card hover:shadow-lg transition-all duration-300' key={item.key}>
-                            <div className="relative overflow-hidden h-auto">
-                                <Image
-                                    src={item.image}
-                                    className='object-cover'
-                                    width={400}
-                                    height={400}
-                                    // sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
-                                    alt={item.title}
-                                    priority
-                                />
-                            </div>
-                            <div className='w-full mt-4 flex justify-center mb-4 px-2 h-[10%]'>
-                            {item.showLink && (
-                                <Link href={`/international-education/events/${item.id}`} className='rounded-[10px] py-[8px] px-6 sm:px-8 font-bold bg-black text-white text-xs sm:text-[12px] hover:bg-gray-800 transition-colors no-underline inline-block'>
-                                More Information
-                                </Link>
-                            )}
-                            </div>
-                        </div>
-                        ))
-                    }
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+      </section>
 
-        <Footer />
+      {/* Event Cards */}
+      <section className="px-5 sm:px-8 lg:px-10 max-w-7xl mx-auto py-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {showEvents.map((item) => (
+            <Link
+              key={item.key}
+              href={`/events/${item.id}`}
+              className="block border border-[#E8ECF0] hover:border-[#1a56ff] transition-colors duration-300 cursor-pointer group h-fit"
+            >
+              <div className="relative aspect-[1079/1080] overflow-hidden">
+                <Image
+                  src={item.image}
+                  fill
+                  className="object-contain bg-[#F5F5F5] w-full h-fit"
+                  alt={item.title}
+                />
+              </div>
+              <div className="p-6">
+                <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-[#5A6A82] mb-3">
+                  <span className="flex items-center gap-1.5">
+                    <Calendar size={14} />
+                    {item.date}
+                  </span>
+                  {item.location && (
+                    <span className="flex items-center gap-1.5">
+                      <MapPin size={14} />
+                      {item.location}
+                    </span>
+                  )}
+                </div>
+                <h3 className="font-display text-xl font-semibold text-[#0A1628] mb-2 group-hover:text-[#0066FF] transition-colors">{item.title}</h3>
+                <p className="text-[15px] text-[#5A6A82] mb-5">{item.shortDescription}</p>
+                <span className="inline-flex items-center gap-2 text-[15px] font-semibold text-[#0066FF] group-hover:text-[#1a56ff] transition-colors">
+                  More Information
+                  <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+                </span>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* Upcoming Event */}
+      {upcomingEvent && (
+        <section className="px-5 sm:px-8 lg:px-10 max-w-7xl mx-auto pb-20">
+          <div className="flex justify-center">
+            <div className="w-full md:w-1/2 border border-dashed border-[#E8ECF0] p-6">
+              <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-[#5A6A82] mb-3">
+                <span className="flex items-center gap-1.5">
+                  <Calendar size={14} />
+                  {upcomingEvent.date}
+                </span>
+                <span className="flex items-center gap-1.5">
+                  <MapPin size={14} />
+                  {upcomingEvent.location}
+                </span>
+              </div>
+              <h3 className="font-display text-xl font-semibold text-[#0A1628] mb-2">{upcomingEvent.title}</h3>
+              <p className="text-[15px] text-[#5A6A82]">{upcomingEvent.shortDescription}</p>
+            </div>
+          </div>
+        </section>
+      )}
     </div>
   )
 }
 
-export default page
+export default Page
