@@ -181,6 +181,141 @@ export const studyTour2024 = {
     contactPhone: "+234 (0) 903 394 2463"
 };
 
+export const studyTour2026 = {
+    id: "study-tour-2026",
+    key: 3,
+    title: "British AUC Study Tour | 2026",
+    date: "20th September, 2026 - 7th October, 2026",
+    location: "5 Major States in Nigeria | 48 High Profile International Secondary Schools",
+    image: "/tour2026.png",
+    link: "/events/study-tour-2026",
+    showLink: true,
+    shortDescription: "Explore, Learn, Experience; Join Our Study Tour!",
+    detailedDescription: "We are pleased to formally invite you to participate in the British AUC Study Tour 2026, scheduled to take place from 20th September to 7th October 2026. This prestigious tour will span five major Nigerian states (Lagos, Oyo, Rivers, Kano, and the Federal Capital Territory (FCT)) and will engage a network of high-profile international secondary schools across the country.\n\nThe Study Tour will primarily feature targeted school visits and student-focused exhibitions, providing direct engagement with SS3 (final-year) students who are actively exploring opportunities to pursue A-Level, International Foundation Year, and Undergraduate programmes in leading global destinations, including the United Kingdom, United States, Canada, Europe, and Australia.\n\nIn addition, select segments of the tour will include centralized college and university exhibitions, strategically organized in collaboration with participating schools. These sessions are designed to actively involve students, their counselors, and in some cases their parents, fostering informed decision-making and strengthening the student recruitment process.\n\nThis initiative presents a unique platform to connect with high-caliber students, enhance institutional visibility, and build meaningful partnerships within Nigeria's international education landscape.",
+    scope: {
+        description: "The British AUC Study Tour 2026 will cover Private High Schools across the visited states. The schools covered during this tour are as follows:",
+        schools: {
+            abuja: [
+                "Funtaj International School, Kudu",
+                "The Centagon International School, Maitama",
+                "Capital Science Academy, Kado",
+                "Premiere Academy, Lugbe",
+                "Pacesetter College, Wuye",
+                "Stella Maris College, Life Camp",
+                "Lead British Secondary School, Gwarimpa",
+                "Starville Secondary School, Jahi",
+                "Cherryfield College, Jikwoyi"
+            ],
+            lagos: [
+                "Corona Schools, Agbara",
+                "Chrisland High School, Ikeja",
+                "Temple School, Ikeja",
+                "Caleb British International School, Lekki",
+                "Corona Secondary School, Lekki",
+                "Atlantic Hall, Epe",
+                "Children International School, Lekki",
+                "Dowen College, Lekki"
+            ],
+            ibadan: [
+                "The Vale College, Ibadan",
+                "The International School, University of Ibadan",
+                "Rubies International School, Ibadan",
+                "Lead British International School, Ibadan",
+                "Lead City International School, Ibadan",
+                "George and Duke International College, Ibadan",
+                "Valencia College, Ibadan",
+                "The Christ Ambassador International College, Ibadan",
+                "Life-forte International School, Ibadan"
+            ],
+            portHarcourt: [
+                "Bishop Okoye Spiritan School, PH",
+                "Bloombred High School, PH",
+                "Jesuit Memorial College, PH",
+                "Norwegian International School, PH",
+                "CITA High School, PH",
+                "Trinitate International School, PH"
+            ],
+            kano: [
+                "Lebanon School, Kano",
+                "Crescent International School, Kano",
+                "Intercontinental School, Kano",
+                "Prime College, Kano",
+                "Queen Science Academy, Kano",
+                "Yandutse College, Kano",
+                "Excel College, Kano",
+                "Asha International Model School, Kano",
+                "Nigerian Tulip International College, Kano",
+                "Lufaloy Schools, Kano"
+            ]
+        }
+    },
+    benefits: [
+        "Meet and discuss with high quality students and parents from top secondary schools in Nigeria",
+        "Generate quality lead of students for A Level, International Foundation Year, and Undergraduate programmes",
+        "Set recruitment target and work with British AUC to meet your target for 2027/2028 recruitment year",
+        "Meet and network with top high schools' principals and counselors in Lagos, Abuja, Port Harcourt, Ibadan and Kano",
+        "Meet and interact with students from 48 top secondary schools in Nigeria",
+        "Become a British AUC priority partner by joining the study tour"
+    ],
+    schedule: [
+        { date: "20th September, 2026", activity: "Delegates Arrive Radisson Hotel Lagos, Ikeja, GRA", location: "Radisson Hotel Lagos, Ikeja, GRA", remark: "Overnight @ Radisson Hotel Lagos, Ikeja, GRA" },
+        { date: "21st September, 2026", activity: "Corona School, Agbara, Lagos", location: "Agbara, Lagos", meetingPoint: "Radisson Hotel Lagos, Ikeja, GRA", remark: "10:00: Corona School Fair\nOvernight @ Radisson Hotel Lagos, Ikeja" },
+        { date: "22nd September, 2026", activity: "Chrisland High School, Ikeja / Temple School, Ikeja\nHead to Victoria Island, Lagos", location: "Ikeja, Lagos", meetingPoint: "Radisson Hotel Lagos, Ikeja, GRA\nRadisson BLU Anchorage Hotel, Victoria Island", remark: "10:00: Chrisland, Ikeja\n12:00: Temple, Ikeja\nOvernight @ Radisson BLU Anchorage Hotel, VI" },
+        { date: "23rd September, 2026", activity: "Caleb British International School, Lekki / Corona Secondary School, Lekki / Atlantic Hall, Epe", location: "Lekki, Lagos", meetingPoint: "Radisson BLU Anchorage Hotel, Victoria Island", remark: "10:00: Caleb British\n12:00: Corona School, Lekki\n14:00: Atlantic Hall\nOvernight @ Radisson BLU Anchorage Hotel, VI" },
+        { date: "24th September, 2026", activity: "Children International School, Lekki / Dowen College, Lekki\nHead to Ibadan, Oyo State", location: "Lekki, Lagos", meetingPoint: "Radisson BLU Anchorage Hotel, Victoria Island\nGolden Tulip Ibadan, Oyo State", remark: "10:00: Children International\n12:00: Dowen College\n14:00: Depart for Ibadan\nOvernight @ Golden Tulip Ibadan, Oyo State" },
+        { date: "25th September, 2026", activity: "Education Fair, Ibadan", location: "Ibadan, Oyo State", meetingPoint: "Golden Tulip Ibadan, Oyo State", remark: "10:00: Education Fair\nOvernight @ Golden Tulip Ibadan, Oyo State" },
+        { date: "26th September, 2026", activity: "Depart for Lagos, Arrive Ikeja, Lagos", location: "Radisson Hotel Lagos, Ikeja, GRA", remark: "Travel Day\nOvernight @ Radisson Hotel Lagos, Ikeja, GRA" },
+        { date: "27th September, 2026", activity: "Depart for Port Harcourt, Rivers State", location: "Port Harcourt, Rivers State", meetingPoint: "Golden Tulip Hotel, GRA, Port Harcourt", remark: "Travel Day\nOvernight @ Golden Tulip Hotel, GRA, Port Harcourt" },
+        { date: "28th September, 2026", activity: "Bishop Okoye Spiritan School, PH / Bloombred High School / Jesuit Memorial College, PH", location: "Port Harcourt, Rivers State", meetingPoint: "Golden Tulip Hotel, GRA, Port Harcourt", remark: "10:00: Bishop Okoye Spiritan\n12:00: Bloombred High School\n14:00: Jesuit Memorial\nOvernight @ Golden Tulip Hotel, GRA, Port Harcourt" },
+        { date: "29th September, 2026", activity: "Norwegian International School, PH / CITA High School, PH / Trinitate International School", location: "Port Harcourt, Rivers State", meetingPoint: "Golden Tulip Hotel, GRA, Port Harcourt", remark: "10:00: Norwegian School, PH\n12:00: CITA High School, PH\n14:00: Trinitate School, PH\nOvernight @ Golden Tulip Hotel, GRA, Port Harcourt" },
+        { date: "30th September, 2026", activity: "Depart for Kano, Kano via Abuja/Lagos Airport", location: "Kano, Kano State", meetingPoint: "Bristol Palace Hotel, Kano", remark: "Travel Day\nOvernight @ Bristol Palace Hotel, Kano" },
+        { date: "1st October, 2026", activity: "Lebanon School Fair, Kano, Kano State", location: "Kano, Kano State", meetingPoint: "Bristol Palace Hotel, Kano", remark: "Overnight @ Bristol Palace Hotel, Kano" },
+        { date: "2nd October, 2026", activity: "Education Fair, Kano", location: "Kano, Kano State", meetingPoint: "Bristol Palace Hotel, Kano", remark: "2pm to 4pm: Lebanon Fair\nOvernight @ Bristol Palace Hotel, Kano" },
+        { date: "3rd October, 2026", activity: "Depart for Abuja, FCT", location: "Abuja, FCT", meetingPoint: "The Envoy Hotel, Abuja", remark: "10:00am – 02:00pm\nOvernight @ The Envoy Hotel, Abuja" },
+        { date: "4th October, 2026", activity: "Free Day", location: "Abuja, FCT", meetingPoint: "The Envoy Hotel, Abuja", remark: "Overnight @ The Envoy Hotel, Abuja" },
+        { date: "5th October, 2026", activity: "Funtaj International School, Gudu / The Centagon International School, Maitama / Capital Science Academy, Kado", location: "Abuja, FCT", meetingPoint: "The Envoy Hotel, Abuja", remark: "10:00: Funtaj School, Gudu\n12:00: The Centagon, Maitama\n14:00: Capital Science, Kado\nOvernight @ The Envoy Hotel, Abuja" },
+        { date: "6th October, 2026", activity: "Premiere Academy, Lugbe / Pacesetters College, Wuye / Stella Maris College, Life Camp", location: "Abuja, FCT", meetingPoint: "The Envoy Hotel, Abuja", remark: "10:00: Premiere Academy\n12:00: Pacesetters, Wuye\n14:00: Stella Maris, Life Camp\nOvernight @ The Envoy Hotel, Abuja" },
+        { date: "7th October, 2026", activity: "Lead British Secondary School, Gwarimpa / Starville Secondary School, Jahi / Cherryfield College, Jikwoyi\nEnd of Study Tour 2026", location: "Abuja, FCT", meetingPoint: "The Envoy Hotel, Abuja", remark: "10:00: Lead British, Gwarimpa\n12:00: Starville Secondary, Jahi\n14:00: Cherryfield College, Jikwoyi" }
+    ],
+    fees: [
+        { sn: 1, city: "Lagos", fee: "1,050" },
+        { sn: 2, city: "Ibadan", fee: "695" },
+        { sn: 3, city: "Port Harcourt", fee: "995" },
+        { sn: 4, city: "Kano", fee: "995" },
+        { sn: 5, city: "Abuja", fee: "1,850" }
+    ],
+    feesNote: "Additional delegate per institution attracts an extra charge of 30% on fees.",
+    feesIncludes: [
+        "Participation fee for selected venue(s)",
+        "Transportation to Schools",
+        "Tea Break"
+    ],
+    feesExcludes: [
+        "Hotels",
+        "Lunch/Dinner",
+        "Flights/Airport Pick Up & Drop Off"
+    ],
+    bankDetails: {
+        bankName: "Guaranty Trust Bank Plc",
+        bankAddress: "Central Business District, Abuja, Nigeria.",
+        accountName: "British American University Consultant Ltd.",
+        accountNumber: "0154292550",
+        sortCode: "GTBINGLA",
+        iban: "GB72 CITI 1850080 8315795"
+    },
+    termsConditions: [
+        "This event is limited to 30 exhibitors/institutions.",
+        "Payments to participate for the study tour must be received by 10th August 2026 to confirm your space. We can't guarantee confirmation for participation for payments received later than this date.",
+        "Delegates are required to come to the event with their branded promotional materials (banners, brochures, table-clothes, etc.) and therefore, wholly responsible for them.",
+        "To pass as a British AUC priority partner with assigned in-house British AUC account manager for the recruitment session 2027/2028, you must confirm a minimum of four (3) cities during the study tour.",
+        "Transportation and arrival to the schools will be in one group as most schools will not allow separate arrivals. Therefore, all delegates are encouraged to keep to the departure time."
+    ],
+    registerBy: "30th of July, 2026",
+    contactPerson: "Juliet Daniel",
+    contactEmail: "events@britishauc.com",
+    contactPhone: "+234 (0) 903 394 2463"
+};
+
 export const studyTour2025 = {
     id: "study-tour-2025",
     key: 2,
@@ -319,6 +454,7 @@ export const studyTour2025 = {
 
 // Update the eventList to include the new 2025 tour
 export const eventList = [
+    studyTour2026,
     studyTour2024,
     studyTour2025,
     // ... other events if any

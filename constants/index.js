@@ -1,4 +1,4 @@
-import { studyTour2024, studyTour2025 } from './eventData';
+import { studyTour2024, studyTour2025, studyTour2026 } from './eventData';
 
 export const navContacts = [
     {
@@ -239,8 +239,10 @@ export const partners = [
 ]
 
 export const eventList = [
+  
     studyTour2024,
     studyTour2025,
+    studyTour2026,
     {
         id: "upcoming-event",
         key: 2,
