@@ -10,7 +10,7 @@ import { PhoneCall, Book } from 'lucide-react'
 const teamList = [
   {
     key: 1,
-    img: "/collins.png",
+    img: "/collins.webp",
     name: "Collins Onyeaji",
     role: "Senior Director - Programmes"
   },
@@ -28,7 +28,7 @@ const teamList = [
   },
   {
     key: 4,
-    img: "/david.png",
+    img: "/david.webp",
     name: "David Hobson",
     role: "Director - Quality Assurance"
   },
@@ -60,6 +60,7 @@ const Page = () => {
             height={500}
             className="h-full w-full object-cover object-center"
             priority
+            sizes="(max-width: 768px) 0px, 50vw"
           />
           <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-white" />
         </div>

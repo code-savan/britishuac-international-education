@@ -4,21 +4,21 @@ import React from 'react'
 const stories = [
   {
     key: 1,
-    image: "/t1.png",
+    image: "/t1.webp",
     name: "Sarah Johnson",
     university: "University of Toronto, Canada",
     desc: "From Lagos to Toronto, Sarah achieved her dream of studying abroad."
   },
   {
     key: 2,
-    image: "/t2.png",
+    image: "/t2.webp",
     name: "Michael Okafor",
     university: "Harvard University, USA",
     desc: "Michael secured a full scholarship to one of the worlds top universities."
   },
   {
     key: 3,
-    image: "/t3.png",
+    image: "/t3.webp",
     name: "Amara Eze",
     university: "Kings College London, UK",
     desc: "Amara's journey to London opened doors to a global career in finance."

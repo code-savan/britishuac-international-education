@@ -51,6 +51,7 @@ const HowWeHelp = ({page}) => {
                 height={500}
                 className="w-full h-full object-cover"
                 priority={index === 0}
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
               <div className="absolute bottom-0 left-0 right-0 h-1/4 bg-gradient-to-t from-black/40 to-transparent pointer-events-none lg:hidden" />
               <div className="absolute bottom-3 right-3 flex items-center gap-1 lg:hidden z-10">

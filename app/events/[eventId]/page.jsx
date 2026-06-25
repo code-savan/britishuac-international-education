@@ -244,7 +244,7 @@ export default function EventDetailPage({ params }) {
                   <div dangerouslySetInnerHTML={{ __html: event.detailedDescription.replace(/\n/g, '<br/>') }}></div>
                 </div>
                 <div className="flex-1 bg-[#F5F5F5]">
-                  <Image src={event.image} alt="Event Image" width={500} height={500} className="w-full h-auto" />
+                  <Image src={event.image} alt="Event Image" width={500} height={500} className="w-full h-auto" sizes="(max-width: 768px) 100vw, 50vw" />
                 </div>
               </div>
             </div>
@@ -491,6 +491,7 @@ export default function EventDetailPage({ params }) {
                   height={400}
                   alt={event.title}
                   className="w-full h-auto"
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
 
                 <div className="mt-6">

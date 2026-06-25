@@ -87,6 +87,7 @@ const Page = () => {
             fill
             className="object-cover object-center"
             priority
+            sizes="100vw"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#0A1628]/95 via-[#0A1628]/80 to-[#0A1628]/40" />
         </div>
@@ -285,6 +286,7 @@ const Page = () => {
                         width={600}
                         height={400}
                         className="w-full h-auto object-cover"
+                        sizes="(max-width: 768px) 100vw, 50vw"
                       />
                       <div className="absolute -bottom-3 -right-3 w-full h-full border border-[#1a56ff]/10 pointer-events-none hidden lg:block" />
                     </div>

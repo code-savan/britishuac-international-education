@@ -146,6 +146,7 @@ export default function BlogPost({ params }) {
             className="object-cover"
             alt={blogPost.title}
             priority
+            sizes="100vw"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0A1628]/90 via-[#0A1628]/30 to-transparent" />
           <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8 md:p-10 lg:p-12">

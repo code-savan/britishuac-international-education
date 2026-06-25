@@ -68,6 +68,7 @@ const About = ({about}) => {
                 height={500}
                 className="w-full h-auto"
                 priority
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
               <div className="absolute bottom-0 left-0 right-0 h-1/4 bg-gradient-to-t from-white to-transparent pointer-events-none" />
             </div>

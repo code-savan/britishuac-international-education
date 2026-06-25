@@ -37,12 +37,13 @@ const Hero = () => {
       {/* Absolute image - md screens and above */}
       <div className="hidden md:block absolute right-0 top-16 lg:top-[170px] bottom-0 w-auto">
         <Image
-          src="/hero-image.png"
+          src="/hero-image.webp"
           alt="Students studying abroad"
           width={4096}
           height={2330}
           className="h-full w-auto object-contain object-right-bottom"
           priority
+          sizes="(max-width: 768px) 0px, (max-width: 1024px) 50vw, 60vw"
         />
       </div>
 
@@ -102,12 +103,13 @@ const Hero = () => {
       {/* Mobile image */}
       <div className="md:hidden w-full mt-8">
         <Image
-          src="/hero-image.png"
+          src="/hero-image.webp"
           alt="Students studying abroad"
           width={4096}
           height={2730}
           className="w-full h-auto"
           priority
+          sizes="100vw"
         />
       </div>
     </section>

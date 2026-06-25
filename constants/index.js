@@ -21,15 +21,15 @@ export const navContacts = [
 export const testimonials = [
     {
         key: 1,
-        image: "/t1.png",
+        image: "/t1.webp",
     },
     {
         key: 2,
-        image: "/t2.png",
+        image: "/t2.webp",
     },
     {
         key: 3,
-        image: "/t3.png",
+        image: "/t3.webp",
     },
 ]
 
@@ -190,51 +190,51 @@ export const partners = [
     },
     {
         key: 6,
-        image: "/p6.png"
+        image: "/p6.webp"
     },
     {
         key: 7,
-        image: "/p7.jpeg"
+        image: "/p7.webp"
     },
     {
         key: 8,
-        image: "/p8.png"
+        image: "/p8.webp"
     },
     {
         key: 9,
-        image: "/p9.png"
+        image: "/p9.webp"
     },
     {
         key: 10,
-        image: "/p10.png"
+        image: "/p10.webp"
     },
     {
         key: 11,
-        image: "/p11.png"
+        image: "/p11.webp"
     },
     {
         key: 12,
-        image: "/p12.png"
+        image: "/p12.webp"
     },
     {
         key: 13,
-        image: "/p13.png"
+        image: "/p13.webp"
     },
     {
         key: 14,
-        image: "/p14.png"
+        image: "/p14.webp"
     },
     {
         key: 15,
-        image: "/p15.png"
+        image: "/p15.webp"
     },
     {
         key: 16,
-        image: "/p16.png"
+        image: "/p16.webp"
     },
     {
         key: 17,
-        image: "/p17.png"
+        image: "/p17.webp"
     },
 ]
 
