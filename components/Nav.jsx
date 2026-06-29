@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect, useRef } from 'react'
+import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { ChevronDown, Menu, X, Headset, ExternalLink } from 'lucide-react'
@@ -65,16 +66,8 @@ const Nav = () => {
                 <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
                     <nav className="flex items-center justify-between h-16 lg:h-[68px]">
                         {/* Logo: grid + text */}
-                        <Link href="/" className="flex-shrink-0 relative z-50 flex items-center gap-3">
-                            <div className="grid grid-cols-2 grid-rows-2 gap-[2px] w-9 h-9">
-                                <div className="bg-[#1a56ff]" />
-                                <div className="bg-[#d0d5dd]" />
-                                <div className="bg-[#dc2626]" />
-                                <div className="bg-[#1a56ff]" />
-                            </div>
-                            <span className="font-display text-[12px] sm:text-[15px] leading-tight font-bold tracking-[0.12em] text-[#0A1628] uppercase">
-                              <span className='text-[#1a56ff]'>British</span> <span className='text-[#dc2626]'>AUC</span>    <br /> International
-                            </span>
+                        <Link href="/" className="flex-shrink-0 relative z-50">
+                            <Image src="/logo.png" alt="British AUC" width={128} height={40} className="h-8 w-auto" priority />
                         </Link>
 
                         {/* Nav links */}
@@ -151,16 +144,8 @@ const Nav = () => {
                 <div className="flex flex-col h-full overflow-y-auto">
                     {/* Top bar: logo + close button */}
                     <div className="flex items-center justify-between px-5 pt-5 pb-4 border-b border-[#e8ecf0]">
-                        <Link href="/" className="flex items-center gap-3" onClick={() => setIsMobileMenuOpen(false)}>
-                            <div className="grid grid-cols-2 grid-rows-2 gap-[2px] w-9 h-9 flex-shrink-0">
-                                <div className="bg-[#1a56ff]" />
-                                <div className="bg-[#d0d5dd]" />
-                                <div className="bg-[#dc2626]" />
-                                <div className="bg-[#1a56ff]" />
-                            </div>
-                            <span className="font-display text-[13px] font-bold tracking-[0.12em] text-[#0A1628] uppercase leading-tight">
-                                <span className='text-[#1a56ff]'>British</span> <span className='text-[#dc2626]'>AUC</span> <br /> International
-                            </span>
+                        <Link href="/" className="flex-shrink-0" onClick={() => setIsMobileMenuOpen(false)}>
+                            <Image src="/logo.png" alt="British AUC" width={128} height={40} className="h-8 w-auto" />
                         </Link>
                         <button onClick={() => setIsMobileMenuOpen(false)} className="p-2 -mr-2" aria-label="Close menu">
                             <X size={22} className="text-[#0A1628]" />
