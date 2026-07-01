@@ -173,10 +173,6 @@ export const partners = [
         image: "/p1.svg"
     },
     {
-        key: 2,
-        image: "/p2.svg"
-    },
-    {
         key: 3,
         image: "/p3.svg"
     },
