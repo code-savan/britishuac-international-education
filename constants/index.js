@@ -101,22 +101,16 @@ export const inq1 = [
     {
         key: 1,
         icon: "/location.png",
-        label: "United Kingdom",
-        content: "128 City Road, London, EC1V 2NX"
-    },
-    {
-        key: 2,
-        icon: "/location.png",
         label: "Lagos",
         content: "56, Opebi Ikeja Road, Salvation Busstop"
     },
     {
-        key: 3,
+        key: 2,
         icon: "/mail.png",
         content: "admin@britishauc.com"
     },
     {
-        key: 4,
+        key: 3,
         icon: "/phone.png",
         content: "+44 7375 654996"
     },
@@ -128,7 +122,7 @@ export const inq2 = [
         key: 1,
         icon: "/location.png",
         label: "Abuja",
-        content: "Kingfem GA247 Plot 264 Ahmadu Bello Express Way, Mabushi-Wuse 2, FCT"
+        content: "Suite 1057, Kingfem GA247 Plot 264 Ahmadu Bello Express Way, Mabushi-Wuse 2, FCT"
     },
     {
         key: 2,

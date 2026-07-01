@@ -89,9 +89,8 @@ const Footer = () => {
             <div className="lg:col-span-3 space-y-6">
               <h3 className="text-[11px] font-bold tracking-[0.12em] uppercase text-[#6B7D9B]">Find Us</h3>
               {[
-                { address: "128 City Road, London, EC1V 2NX, United Kingdom" },
                 { address: "56, Opebi Ikeja Road, Salvation Busstop, Lagos" },
-                { address: "Kingfem GA247 Plot 264 Ahmadu Bello Express Way, Mabushi-Wuse 2, Abuja, FCT" },
+                { address: "Suite 1057, Kingfem GA247 Plot 264 Ahmadu Bello Express Way, Mabushi-Wuse 2, Abuja, FCT" },
                 { address: "Davies Mall Plaza 2B, General Diriyai Street off Tombia Extension, GRA Phase 2, Port Harcourt" },
               ].map((loc, i) => (
                 <p key={i} className="text-sm text-[#8A9AB0] leading-relaxed">
