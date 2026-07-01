@@ -35,15 +35,15 @@ const Hero = () => {
   return (
     <section className="relative bg-white min-h-screen pt-16 lg:pt-[150px] overflow-hidden">
       {/* Absolute image - md screens and above */}
-      <div className="hidden md:block absolute right-0 top-16 lg:top-[170px] bottom-0 w-auto">
+      <div className="hidden md:block absolute right-0 top-16 lg:top-[170px] bottom-0 w-[50%] xl:w-[45%] 2xl:w-[40%] max-w-[700px]">
         <Image
           src="/hero-image.webp"
           alt="Students studying abroad"
           width={4096}
           height={2330}
-          className="h-full w-auto object-contain object-right-bottom"
+          className="h-full w-full object-contain object-right-bottom"
           priority
-          sizes="(max-width: 768px) 0px, (max-width: 1024px) 50vw, 60vw"
+          sizes="(max-width: 768px) 0px, (max-width: 1280px) 50vw, 40vw"
         />
       </div>
 

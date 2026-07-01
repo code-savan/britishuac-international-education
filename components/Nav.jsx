@@ -36,6 +36,8 @@ const Nav = () => {
         { href: '/services', label: 'Our Services' },
         { href: '/events', label: 'Events' },
         { href: '/blog', label: 'Blogs' },
+        { href: 'https://www.sports.britishauc.com', label: 'Sports', external: true },
+        { href: 'https://www.britishaucunipathway.com/', label: 'Colleges', external: true },
     ]
 
     const studyLinks = [
@@ -73,7 +75,9 @@ const Nav = () => {
                         {/* Nav links */}
                         <div className="hidden lg:flex items-center justify-end flex-1 gap-1">
                             <ul className="flex items-center gap-0.5">
-                                {navLinks.map(({ href, label, hasDropdown }) => (
+                                {navLinks.map((item) => {
+                                const { href, label, hasDropdown } = item
+                                return (
                                     <li key={label} className={hasDropdown ? 'relative' : ''} ref={hasDropdown ? dropdownRef : null}>
                                         {hasDropdown ? (
                                             <>
@@ -99,17 +103,20 @@ const Nav = () => {
                                         ) : (
                                             <Link
                                                 href={href}
-                                                className={`inline-block px-4 py-2 text-[14px] font-medium transition-colors ${
+                                                {...(item.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                                                className={`inline-flex items-center gap-1 px-4 py-2 text-[14px] font-medium transition-colors ${
                                                     active(href)
                                                         ? 'text-[#1a56ff]'
                                                         : 'text-[#4A5A72] hover:text-[#0A1628]'
                                                 }`}
                                             >
                                                 {label}
+                                                {item.external && <ExternalLink size={12} className="opacity-50" />}
                                             </Link>
                                         )}
                                     </li>
-                                ))}
+                                )
+                            })}
                             </ul>
                         </div>
 
@@ -121,12 +128,6 @@ const Nav = () => {
                                     Contact
                                 </button>
                             </Link>
-                            <a href="https://www.sports.britishauc.com" target="_blank" rel="noopener noreferrer">
-                                <button className="px-5 py-2 text-[14px] font-semibold text-[#4A5A72] border border-[#d0d5dd] hover:border-[#0A1628] hover:text-[#0A1628] transition-colors flex items-center gap-1.5">
-                                    Sports
-                                    <ExternalLink size={14} />
-                                </button>
-                            </a>
                         </div>
 
                         {/* Mobile hamburger */}
@@ -155,7 +156,9 @@ const Nav = () => {
                     {/* Nav links */}
                     <div className="flex-1 px-5 py-6">
                         <ul className="flex flex-col gap-1">
-                            {navLinks.map(({ href, label, hasDropdown }) => (
+                            {navLinks.map((item) => {
+                                const { href, label, hasDropdown, external } = item
+                                return (
                                 <li key={label}>
                                     {hasDropdown ? (
                                         <>
@@ -171,13 +174,19 @@ const Nav = () => {
                                                 </ul>
                                             )}
                                         </>
+                                    ) : external ? (
+                                        <a href={href} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 py-3 text-[15px] font-medium text-[#4A5A72] hover:text-[#0A1628] transition-colors">
+                                            {label}
+                                            <ExternalLink size={13} className="opacity-50" />
+                                        </a>
                                     ) : (
                                         <Link href={href} onClick={() => setIsMobileMenuOpen(false)} className={`block py-3 text-[15px] font-medium ${active(href) ? 'text-[#1a56ff]' : 'text-[#4A5A72] hover:text-[#0A1628] transition-colors'}`}>
                                             {label}
                                         </Link>
                                     )}
                                 </li>
-                            ))}
+                                )
+                            })}
                         </ul>
                     </div>
 
@@ -208,12 +217,6 @@ const Nav = () => {
                             <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)}>
                                 <button className="w-full py-3.5 text-sm font-semibold text-white bg-[#1a56ff] hover:bg-[#1447d1] transition-colors flex items-center justify-center gap-2"><Headset size={16} />Contact</button>
                             </Link>
-                            <a href="https://www.sports.britishauc.com" target="_blank" rel="noopener noreferrer" onClick={() => setIsMobileMenuOpen(false)}>
-                                <button className="w-full py-3.5 text-sm font-semibold text-[#4A5A72] border border-[#d0d5dd] transition-colors flex items-center justify-center gap-1.5">
-                                    Sports
-                                    <ExternalLink size={14} />
-                                </button>
-                            </a>
                         </div>
                     </div>
                 </div>
