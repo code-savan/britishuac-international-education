@@ -33,21 +33,8 @@ const Hero = () => {
   }, [])
 
   return (
-    <section className="relative bg-white min-h-screen pt-16 lg:pt-[150px] overflow-hidden">
+    <section className="relative bg-white min-h-screen pt-14 lg:pt-[140px] overflow-hidden">
       <div className="relative max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 md:h-full">
-        {/* Absolute image - md screens and above */}
-        <div className="hidden md:block absolute right-0 top-16 lg:top-[170px] bottom-0 w-[45%] xl:w-[42%] 2xl:w-[40%] max-w-[650px]">
-          <Image
-            src="/hero-image.webp"
-            alt="Students studying abroad"
-            width={4096}
-            height={2330}
-            className="h-full w-full object-contain object-right-bottom"
-            priority
-            sizes="(max-width: 768px) 0px, (max-width: 1280px) 45vw, 40vw"
-          />
-        </div>
-
         <div className="flex items-center md:min-h-[calc(100vh-64px)] lg:min-h-[calc(100vh-150px)]">
           <div className="w-full md:w-1/2 max-w-xl md:py-16 py-12 md:py-20">
             <h1 className="font-display text-[clamp(2.5rem,6vw,4.5rem)] font-bold text-[#0A1628] leading-[1.05] tracking-[-0.03em] mb-6 text-balance">
@@ -95,6 +82,20 @@ const Hero = () => {
                   Call Us
                 </button>
               </a>
+            </div>
+          </div>
+
+          {/* Hero image - desktop */}
+          <div className="hidden md:block w-1/2 relative">
+            <div className="relative w-full h-[500px] lg:h-[600px]">
+              <Image
+                src="/hero-image.webp"
+                alt="Students studying abroad"
+                fill
+                className="object-contain"
+                priority
+                sizes="45vw"
+              />
             </div>
           </div>
         </div>

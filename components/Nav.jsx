@@ -50,7 +50,7 @@ const Nav = () => {
         <header className="fixed top-0 left-0 right-0 z-50">
             {/* Black top bar - desktop only */}
             <div className="hidden lg:block bg-black">
-                <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 py-3 sm:py-3.5 flex items-center justify-between">
+                <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 py-2.5 sm:py-3 flex items-center justify-between">
                     <p className="text-[10px] font-semibold text-white/85 text-center uppercase">
                         Are you or your child considering studying in the US? Give us a{' '}
                         <span className="underline decoration-[#1a56ff] font-medium decoration-1 underline-offset-2">CALL today</span> 
@@ -66,10 +66,10 @@ const Nav = () => {
             {/* White nav */}
             <div className="bg-white border-b border-[#e8ecf0]">
                 <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
-                    <nav className="flex items-center justify-between h-16 lg:h-[68px]">
+                    <nav className="flex items-center justify-between h-14 lg:h-16">
                         {/* Logo: grid + text */}
                         <Link href="/" className="flex-shrink-0 relative z-50">
-                            <Image src="/logo.png" alt="British AUC" width={128} height={40} className="h-8 w-auto" priority />
+                            <Image src="/logo.png" alt="British AUC" width={160} height={48} className="h-10 w-auto" priority />
                         </Link>
 
                         {/* Nav links */}
@@ -146,7 +146,7 @@ const Nav = () => {
                     {/* Top bar: logo + close button */}
                     <div className="flex items-center justify-between px-5 pt-5 pb-4 border-b border-[#e8ecf0]">
                         <Link href="/" className="flex-shrink-0" onClick={() => setIsMobileMenuOpen(false)}>
-                            <Image src="/logo.png" alt="British AUC" width={128} height={40} className="h-8 w-auto" />
+                            <Image src="/logo.png" alt="British AUC" width={160} height={48} className="h-10 w-auto" />
                         </Link>
                         <button onClick={() => setIsMobileMenuOpen(false)} className="p-2 -mr-2" aria-label="Close menu">
                             <X size={22} className="text-[#0A1628]" />
