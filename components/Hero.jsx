@@ -89,7 +89,7 @@ const Hero = () => {
           <div className="hidden md:block w-1/2 relative">
             <div className="relative w-full h-[500px] lg:h-[600px]">
               <Image
-                src="/hero-image.webp"
+                src="/hero-image.jpeg"
                 alt="Students studying abroad"
                 fill
                 className="object-contain"
@@ -104,7 +104,7 @@ const Hero = () => {
       {/* Mobile image */}
       <div className="md:hidden w-full mt-8">
         <Image
-          src="/hero-image.webp"
+          src="/hero-image.jpeg"
           alt="Students studying abroad"
           width={4096}
           height={2730}
