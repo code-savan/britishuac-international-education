@@ -89,17 +89,14 @@ const Footer = () => {
             <div className="lg:col-span-3 space-y-6">
               <h3 className="text-[11px] font-bold tracking-[0.12em] uppercase text-[#6B7D9B]">Find Us</h3>
               {[
-                { href: "https://maps.app.goo.gl/JMkDDmrpffF79Hyq7", address: "128 City Road, London, United Kingdom", src: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.2635280087934!2d-0.09081892337876156!3d51.526726171817735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761d64c8d91b11%3A0x8fd10f948b8c6ef5!2s128%20City%20Rd%2C%20London%20EC1V%202NX%2C%20UK!5e0!3m2!1sen!2sng!4v1729153840310!5m2!1sen!2sng" },
-                { href: "https://maps.app.goo.gl/SreHVgFx3ubhNUs16", address: "Kingfem GA247, Abuja, Nigeria", src: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3939.754554342161!2d7.456561375019561!3d9.086110190977537!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e0b929d261bc1%3A0xf87655077fcf6153!2sKINGFEM%20GA247!5e0!3m2!1sen!2sng!4v1729153977276!5m2!1sen!2sng" },
+                { address: "128 City Road, London, EC1V 2NX, United Kingdom" },
+                { address: "56, Opebi Ikeja Road, Salvation Busstop, Lagos" },
+                { address: "Kingfem GA247 Plot 264 Ahmadu Bello Express Way, Mabushi-Wuse 2, Abuja, FCT" },
+                { address: "Davies Mall Plaza 2B, General Diriyai Street off Tombia Extension, GRA Phase 2, Port Harcourt" },
               ].map((loc, i) => (
-                <div key={i}>
-                  <Link target="_blank" href={loc.href} className="text-sm text-[#8A9AB0] hover:text-white transition-colors duration-200 block mb-2">
-                    {loc.address}
-                  </Link>
-                  <div className="overflow-hidden border border-[#1A2A4A]">
-                    <iframe src={loc.src} width="100%" height="90" className="border-0" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
-                  </div>
-                </div>
+                <p key={i} className="text-sm text-[#8A9AB0] leading-relaxed">
+                  {loc.address}
+                </p>
               ))}
             </div>
           </div>

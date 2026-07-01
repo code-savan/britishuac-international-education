@@ -25,21 +25,20 @@ const ContactSec = ({page}) => {
 
         <div className="grid md:grid-cols-2 gap-8">
           <div className="bg-[#0A1628]">
-            <div className="relative h-[220px] overflow-hidden">
-              <div className="absolute top-3 left-3 z-10 bg-[#0A1628]/80 px-3 py-1.5">
-                <span className="text-white text-[11px] font-semibold uppercase tracking-[0.08em]">London Office</span>
-              </div>
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.2635280087934!2d-0.09081892337876156!3d51.526726171817735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761d64c8d91b11%3A0x8fd10f948b8c6ef5!2s128%20City%20Rd%2C%20London%20EC1V%202NX%2C%20UK!5e0!3m2!1sen!2sng!4v1729153840310!5m2!1sen!2sng"
-                title="London office map"
-                className="w-full h-full border-0"
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
-            </div>
             <div className="p-8 lg:p-10">
+              <h3 className="text-white font-semibold text-sm uppercase tracking-[0.08em] mb-6">London Office</h3>
               <div className="space-y-5">
-                {inq1.map((item) => {
+                {inq1.filter(item => item.icon === '/location.png').map((item) => (
+                  <div key={item.key} className="flex items-start gap-4">
+                    <div className="w-10 h-10 bg-white/5 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <MapPin size={16} className="text-white/60" />
+                    </div>
+                    <p className="text-white text-sm sm:text-base font-medium leading-relaxed">{item.content}</p>
+                  </div>
+                ))}
+              </div>
+              <div className="space-y-5 mt-6 pt-6 border-t border-[#1A2A4A]">
+                {inq1.filter(item => item.icon !== '/location.png').map((item) => {
                   const Icon = iconMap[item.icon] || MapPin
                   return (
                     <div key={item.key} className="flex items-start gap-4">
@@ -51,28 +50,24 @@ const ContactSec = ({page}) => {
                   )
                 })}
               </div>
-              <p className="text-[#6B7D9B] text-xs uppercase tracking-[0.08em] mt-8 pt-6 border-t border-[#1A2A4A]">
-                International Toll Line
-              </p>
             </div>
           </div>
 
           <div className="bg-[#0A1628]">
-            <div className="relative h-[220px] overflow-hidden">
-              <div className="absolute top-3 left-3 z-10 bg-[#0A1628]/80 px-3 py-1.5">
-                <span className="text-white text-[11px] font-semibold uppercase tracking-[0.08em]">Abuja Office</span>
-              </div>
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3939.754554342161!2d7.456561375019561!3d9.086110190977537!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e0b929d261bc1%3A0xf87655077fcf6153!2sKINGFEM%20GA247!5e0!3m2!1sen!2sng!4v1729153977276!5m2!1sen!2sng"
-                title="Abuja office map"
-                className="w-full h-full border-0"
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
-            </div>
             <div className="p-8 lg:p-10">
+              <h3 className="text-white font-semibold text-sm uppercase tracking-[0.08em] mb-6">Abuja Office</h3>
               <div className="space-y-5">
-                {inq2.map((item) => {
+                {inq2.filter(item => item.icon === '/location.png').map((item) => (
+                  <div key={item.key} className="flex items-start gap-4">
+                    <div className="w-10 h-10 bg-white/5 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <MapPin size={16} className="text-white/60" />
+                    </div>
+                    <p className="text-white text-sm sm:text-base font-medium leading-relaxed">{item.content}</p>
+                  </div>
+                ))}
+              </div>
+              <div className="space-y-5 mt-6 pt-6 border-t border-[#1A2A4A]">
+                {inq2.filter(item => item.icon !== '/location.png').map((item) => {
                   const Icon = iconMap[item.icon] || MapPin
                   return (
                     <div key={item.key} className="flex items-start gap-4">
@@ -84,9 +79,6 @@ const ContactSec = ({page}) => {
                   )
                 })}
               </div>
-              <p className="text-[#6B7D9B] text-xs uppercase tracking-[0.08em] mt-8 pt-6 border-t border-[#1A2A4A]">
-                Africa Toll Line
-              </p>
             </div>
           </div>
         </div>

@@ -101,7 +101,12 @@ export const inq1 = [
     {
         key: 1,
         icon: "/location.png",
-        content: "128 City Road, London, United Kingdom"
+        content: "128 City Road, London, EC1V 2NX, United Kingdom"
+    },
+    {
+        key: 2,
+        icon: "/location.png",
+        content: "56, Opebi Ikeja Road, Salvation Busstop, Lagos"
     },
     {
         key: 3,
@@ -109,7 +114,7 @@ export const inq1 = [
         content: "admin@britishauc.com"
     },
     {
-        key: 3,
+        key: 4,
         icon: "/phone.png",
         content: "+44 7375 654996"
     },
@@ -120,7 +125,12 @@ export const inq2 = [
     {
         key: 1,
         icon: "/location.png",
-        content: "Kingfem GA247 Plot 264, Ahmadu Bello Express Way, Mabushi-Wuse 2, Abuja, FCT-Nigeria."
+        content: "Kingfem GA247 Plot 264 Ahmadu Bello Express Way, Mabushi-Wuse 2, Abuja, FCT"
+    },
+    {
+        key: 2,
+        icon: "/location.png",
+        content: "Davies Mall Plaza 2B, General Diriyai Street off Tombia Extension, GRA Phase 2, Port Harcourt"
     },
     {
         key: 3,
@@ -128,7 +138,7 @@ export const inq2 = [
         content: "admin@britishauc.com / abuja@britishauc.com"
     },
     {
-        key: 3,
+        key: 4,
         icon: "/phone.png",
         content: "+234 9033942463 / +234 8059000097"
     },
