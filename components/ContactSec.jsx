@@ -26,7 +26,6 @@ const ContactSec = ({page}) => {
         <div className="grid md:grid-cols-2 gap-8">
           <div className="bg-[#0A1628]">
             <div className="p-8 lg:p-10">
-              <h3 className="text-white font-semibold text-sm uppercase tracking-[0.08em] mb-6">London Office</h3>
               <div className="space-y-5">
                 {inq1.filter(item => item.icon === '/location.png').map((item) => (
                   <div key={item.key} className="flex items-start gap-4">
@@ -58,7 +57,6 @@ const ContactSec = ({page}) => {
 
           <div className="bg-[#0A1628]">
             <div className="p-8 lg:p-10">
-              <h3 className="text-white font-semibold text-sm uppercase tracking-[0.08em] mb-6">Abuja Office</h3>
               <div className="space-y-5">
                 {inq2.filter(item => item.icon === '/location.png').map((item) => (
                   <div key={item.key} className="flex items-start gap-4">
