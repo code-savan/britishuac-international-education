@@ -101,12 +101,14 @@ export const inq1 = [
     {
         key: 1,
         icon: "/location.png",
-        content: "128 City Road, London, EC1V 2NX, United Kingdom"
+        label: "United Kingdom",
+        content: "128 City Road, London, EC1V 2NX"
     },
     {
         key: 2,
         icon: "/location.png",
-        content: "56, Opebi Ikeja Road, Salvation Busstop, Lagos"
+        label: "Lagos",
+        content: "56, Opebi Ikeja Road, Salvation Busstop"
     },
     {
         key: 3,
@@ -125,12 +127,14 @@ export const inq2 = [
     {
         key: 1,
         icon: "/location.png",
-        content: "Kingfem GA247 Plot 264 Ahmadu Bello Express Way, Mabushi-Wuse 2, Abuja, FCT"
+        label: "Abuja",
+        content: "Kingfem GA247 Plot 264 Ahmadu Bello Express Way, Mabushi-Wuse 2, FCT"
     },
     {
         key: 2,
         icon: "/location.png",
-        content: "Davies Mall Plaza 2B, General Diriyai Street off Tombia Extension, GRA Phase 2, Port Harcourt"
+        label: "Port Harcourt",
+        content: "Davies Mall Plaza 2B, General Diriyai Street off Tombia Extension, GRA Phase 2"
     },
     {
         key: 3,

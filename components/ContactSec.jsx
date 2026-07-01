@@ -33,7 +33,10 @@ const ContactSec = ({page}) => {
                     <div className="w-10 h-10 bg-white/5 flex items-center justify-center flex-shrink-0 mt-0.5">
                       <MapPin size={16} className="text-white/60" />
                     </div>
-                    <p className="text-white text-sm sm:text-base font-medium leading-relaxed">{item.content}</p>
+                    <div>
+                      <p className="text-[#0066FF] text-xs font-semibold uppercase tracking-[0.06em] mb-0.5">{item.label}</p>
+                      <p className="text-white text-sm sm:text-base font-medium leading-relaxed">{item.content}</p>
+                    </div>
                   </div>
                 ))}
               </div>
@@ -62,7 +65,10 @@ const ContactSec = ({page}) => {
                     <div className="w-10 h-10 bg-white/5 flex items-center justify-center flex-shrink-0 mt-0.5">
                       <MapPin size={16} className="text-white/60" />
                     </div>
-                    <p className="text-white text-sm sm:text-base font-medium leading-relaxed">{item.content}</p>
+                    <div>
+                      <p className="text-[#0066FF] text-xs font-semibold uppercase tracking-[0.06em] mb-0.5">{item.label}</p>
+                      <p className="text-white text-sm sm:text-base font-medium leading-relaxed">{item.content}</p>
+                    </div>
                   </div>
                 ))}
               </div>
