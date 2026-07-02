@@ -41,8 +41,8 @@ export const success = [
     },
     {
         key: 2,
-        count: "100%",
-        info: "If our students don't succeed, then we haven't done our job. Our students have a 100% University acceptance rate!"
+        count: "98%",
+        info: "If our students don't succeed, then we haven't done our job. Our students have a 98% University acceptance rate!"
     },
     {
         key: 3,
