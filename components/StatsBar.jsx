@@ -2,7 +2,7 @@ const stats = [
   { number: "1,000+", label: "Students Placed" },
   { number: "25+", label: "Countries" },
   { number: "14", label: "Years Experience" },
-  { number: "100%", label: "Acceptance Rate" },
+  { number: "98%", label: "Acceptance Rate" },
 ]
 
 const StatsBar = () => {
