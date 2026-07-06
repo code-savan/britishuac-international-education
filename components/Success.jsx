@@ -53,11 +53,10 @@ const Success = () => {
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                   sizes="(max-width: 768px) 100vw, 33vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0A1628]/90 via-[#0A1628]/20 to-transparent" />
               </div>
-              <div className="absolute bottom-0 left-0 right-0 p-6">
-                <p className="text-white font-bold text-[17px] mb-0.5">{story.name}</p>
-                <p className="text-white/60 text-[13px]">{story.university}</p>
+              <div className="p-5 border-t border-[#E8ECF0]">
+                <p className="font-bold text-[17px] text-[#0A1628] mb-0.5">{story.name}</p>
+                <p className="text-[13px] text-[#5A6A82]">{story.university}</p>
               </div>
             </div>
           ))}
