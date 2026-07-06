@@ -244,9 +244,9 @@ export const partners = [
 
 export const eventList = [
   
-    studyTour2024,
-    studyTour2025,
     studyTour2026,
+    studyTour2025,
+    studyTour2024,
     {
         id: "upcoming-event",
         key: 2,

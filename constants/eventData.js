@@ -455,7 +455,7 @@ export const studyTour2025 = {
 // Update the eventList to include the new 2025 tour
 export const eventList = [
     studyTour2026,
-    studyTour2024,
     studyTour2025,
+    studyTour2024,
     // ... other events if any
 ];
