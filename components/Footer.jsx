@@ -48,7 +48,7 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="lg:col-span-5 grid grid-cols-2 gap-8">
+            <div className="lg:col-span-4 grid grid-cols-2 gap-8">
               <div>
                 <h3 className="text-[11px] font-bold tracking-[0.12em] uppercase text-[#6B7D9B] mb-6">Company</h3>
                 <ul className="space-y-3">
@@ -84,9 +84,9 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="lg:col-span-3">
+            <div className="lg:col-span-4">
               <h3 className="text-[11px] font-bold tracking-[0.12em] uppercase text-[#6B7D9B] mb-6">Find Us</h3>
-              <div className="grid grid-cols-2 gap-x-6 gap-y-5">
+              <div className="space-y-5">
                 {[
                   {
                     city: "Abuja",
