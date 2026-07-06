@@ -116,7 +116,7 @@ const Footer = () => {
       <div className="bg-[#060E1A] border-t border-white/5">
         <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 py-5">
           <p className="text-[11px] text-[#4A5A72] leading-relaxed text-center">
-            Disclaimer: British AUC provides visa and admission application support services. While we maintain a 100% success rate, visa approvals are ultimately at the discretion of individual embassies and immigration authorities. We make no guarantees regarding specific outcomes. All information on this website is for general informational purposes only and does not constitute legal advice. Students are encouraged to verify all details directly with relevant institutions and authorities.
+            Disclaimer: British AUC provides visa and admission application support services. While we maintain a 97% visa success rate, visa approvals are ultimately at the discretion of individual embassies and immigration authorities. We make no guarantees regarding specific outcomes. All information on this website is for general informational purposes only and does not constitute legal advice. Students are encouraged to verify all details directly with relevant institutions and authorities.
           </p>
         </div>
       </div>

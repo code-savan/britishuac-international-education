@@ -65,7 +65,7 @@ export const helpContent = [
     title: "University and Visa Application Support",
     content: `We take pride in providing comprehensive support throughout the university/college application process. Our team will assist you in accurately completing application forms, ensuring that all relevant information is included to increase your chances of admission.
 <br/>
-   Additionally, we take full charge of your visa application, ensuring that the correct documents are prepared, the application fee is paid, and achieving an outstanding 100% success rate.`,
+   Additionally, we take full charge of your visa application, ensuring that the correct documents are prepared, the application fee is paid, and achieving an outstanding 97% success rate.`,
     image: "/02.webp"
   },
   {
@@ -151,7 +151,7 @@ export const why = [
     {
         key: 2,
         image: "/w2.svg",
-        content: "We have 100% Visa success rate."
+        content: "We have 97% Visa success rate."
     },
     {
         key: 3,

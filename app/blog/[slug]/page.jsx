@@ -205,7 +205,7 @@ export default function BlogPost({ params }) {
                 British AUC is committed to providing Nigerian students with the most up-to-date information and guidance for studying abroad. Our team of experienced counsellors works tirelessly to ensure every student receives the support they need to achieve their academic goals.
               </p>
               <p>
-                With over 14 years of experience and a 100% success rate in visa applications and university admissions, we have helped thousands of students gain admission to prestigious institutions across the UK, USA, Canada, Australia, and other top study destinations worldwide.
+                With over 14 years of experience, a 97% visa success rate and 98% university admission success rate, we have helped thousands of students gain admission to prestigious institutions across the UK, USA, Canada, Australia, and other top study destinations worldwide.
               </p>
             </div>
           )}

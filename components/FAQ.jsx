@@ -13,11 +13,11 @@ const faqs = [
   },
   {
     q: "What is your visa success rate?",
-    a: "We maintain a 100% visa success rate. Our experienced team ensures that all documentation is correctly prepared and submitted, maximizing your chances of approval."
+    a: "We maintain a 97% visa success rate. Our experienced team ensures that all documentation is correctly prepared and submitted, maximizing your chances of approval."
   },
   {
     q: "Do you guarantee university admission?",
-    a: "We have a 100% university acceptance rate for our students. Our team works closely with you to select suitable institutions and programs that match your academic profile and preferences."
+    a: "We have a 98% university acceptance rate for our students. Our team works closely with you to select suitable institutions and programs that match your academic profile and preferences."
   },
   {
     q: "How long does the application process take?",
