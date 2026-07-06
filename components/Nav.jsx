@@ -48,21 +48,6 @@ const Nav = () => {
 
     return (
         <header className="fixed top-0 left-0 right-0 z-50">
-            {/* Black top bar - desktop only */}
-            <div className="hidden lg:block bg-black">
-                <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 py-2.5 sm:py-3 flex items-center justify-between">
-                    <p className="text-[10px] font-semibold text-white/85 text-center uppercase">
-                        Are you or your child considering studying in the US? Give us a{' '}
-                        <span className="underline decoration-[#1a56ff] font-medium decoration-1 underline-offset-2">CALL today</span> 
-                    </p>
-                    <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-1 font-medium text-[10px] text-white uppercase">
-                        <a href="tel:+447375654996" className="hover:text-white/90 transition-colors underline">+44 7375 654996 (International)</a>
-                        <a href="tel:+2348059000097" className="hover:text-white/90 transition-color underline">+234 (0) 805 900 0097 (Africa)</a>
-                        <a href="mailto:admin@britishauc.com" className="hover:text-white/90 transition-colors underline">admin@britishauc.com</a>
-                    </div>
-                </div>
-            </div>
-
             {/* White nav */}
             <div className="bg-white border-b border-[#e8ecf0]">
                 <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">

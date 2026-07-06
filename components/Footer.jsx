@@ -89,13 +89,37 @@ const Footer = () => {
             <div className="lg:col-span-3 space-y-6">
               <h3 className="text-[11px] font-bold tracking-[0.12em] uppercase text-[#6B7D9B]">Find Us</h3>
               {[
-                { address: "56, Opebi Ikeja Road, Salvation Busstop, Lagos" },
-                { address: "Suite 1057, Kingfem GA247 Plot 264 Ahmadu Bello Express Way, Mabushi-Wuse 2, Abuja, FCT" },
-                { address: "Davies Mall Plaza 2B, General Diriyai Street off Tombia Extension, GRA Phase 2, Port Harcourt" },
+                {
+                  city: "Abuja",
+                  address: "Suite 1057, Kingfem GA247 Plot 264 Ahmadu Bello Express Way, Mabushi-Wuse 2, Abuja, FCT",
+                  phone: "+234 805 900 0097",
+                  email: "admin@britishauc.com"
+                },
+                {
+                  city: "Lagos",
+                  address: "56, Opebi Ikeja Road, Salvation Busstop, Lagos",
+                  phone: "+234 903 389 2750",
+                  email: "lagos@britishauc.com"
+                },
+                {
+                  city: "Port Harcourt",
+                  address: "Davies Mall Plaza 2B, General Diriyai Street off Tombia Extension, GRA Phase 2, Port Harcourt",
+                  phone: "+234 806 758 9413",
+                  email: "portharcourt@britishauc.com"
+                },
+                {
+                  city: "London",
+                  address: "128 City Road, London, EC1V 2NX, United Kingdom",
+                  phone: "+44 7375 654996 (International)",
+                  email: "london@britishauc.com"
+                },
               ].map((loc, i) => (
-                <p key={i} className="text-sm text-[#8A9AB0] leading-relaxed">
-                  {loc.address}
-                </p>
+                <div key={i}>
+                  <p className="text-sm font-semibold text-white mb-1">{loc.city}</p>
+                  <p className="text-sm text-[#8A9AB0] leading-relaxed mb-1">{loc.address}</p>
+                  <p className="text-sm text-[#8A9AB0]">{loc.phone}</p>
+                  <a href={`mailto:${loc.email}`} className="text-sm text-[#8A9AB0] hover:text-white transition-colors">{loc.email}</a>
+                </div>
               ))}
             </div>
           </div>
