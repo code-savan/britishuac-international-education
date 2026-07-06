@@ -8,7 +8,6 @@ import Partners from "@/components/Partners"
 import Success from "@/components/Success"
 import BlogPreview from "@/components/BlogPreview"
 import FAQ from "@/components/FAQ"
-import ContactSec from "@/components/ContactSec"
 import CTABanner from "@/components/CTABanner"
 
 export default function InternationalEducation() {
@@ -24,7 +23,6 @@ export default function InternationalEducation() {
       <Success />
       <BlogPreview />
       <FAQ />
-      <ContactSec />
       <CTABanner />
     </>
   )
