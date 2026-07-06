@@ -2,27 +2,9 @@ import Image from 'next/image'
 import React from 'react'
 
 const stories = [
-  {
-    key: 1,
-    image: "/t1.webp",
-    name: "Sarah Johnson",
-    university: "University of Toronto, Canada",
-    desc: "From Lagos to Toronto, Sarah achieved her dream of studying abroad."
-  },
-  {
-    key: 2,
-    image: "/t2.webp",
-    name: "Michael Okafor",
-    university: "Harvard University, USA",
-    desc: "Michael secured a full scholarship to one of the worlds top universities."
-  },
-  {
-    key: 3,
-    image: "/t3.webp",
-    name: "Amara Eze",
-    university: "Kings College London, UK",
-    desc: "Amara's journey to London opened doors to a global career in finance."
-  },
+  { key: 1, image: "/t1.webp" },
+  { key: 2, image: "/t2.webp" },
+  { key: 3, image: "/t3.webp" },
 ]
 
 const Success = () => {
@@ -48,15 +30,11 @@ const Success = () => {
               <div className="relative aspect-[4/5] overflow-hidden">
                 <Image
                   src={story.image}
-                  alt={story.name}
+                  alt=""
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                   sizes="(max-width: 768px) 100vw, 33vw"
                 />
-              </div>
-              <div className="p-5 border-t border-[#E8ECF0]">
-                <p className="font-bold text-[17px] text-[#0A1628] mb-0.5">{story.name}</p>
-                <p className="text-[13px] text-[#5A6A82]">{story.university}</p>
               </div>
             </div>
           ))}
