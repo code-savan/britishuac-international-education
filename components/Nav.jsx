@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { ChevronDown, Menu, X, Headset, ExternalLink } from 'lucide-react'
+import { ChevronDown, Menu, X, ExternalLink } from 'lucide-react'
 
 const Nav = () => {
     const pathname = usePathname()
@@ -105,15 +105,7 @@ const Nav = () => {
                             </ul>
                         </div>
 
-                        {/* Right actions */}
-                        <div className="hidden lg:flex items-center gap-2.5 ml-6">
-                            <Link href="/contact">
-                                <button className="px-5 py-2 text-[14px] font-semibold text-white bg-[#1a56ff] hover:bg-[#1447d1] transition-colors flex items-center gap-2">
-                                    <Headset size={16} />
-                                    Contact
-                                </button>
-                            </Link>
-                        </div>
+
 
                         {/* Mobile hamburger */}
                         <button className={`lg:hidden mobile-menu-button relative z-50 ${isMobileMenuOpen ? 'pointer-events-none opacity-0' : ''}`} onClick={() => { setIsMobileMenuOpen(prev => !prev); setIsMobileDropdownOpen(false) }} aria-label="Toggle menu">
@@ -175,35 +167,6 @@ const Nav = () => {
                         </ul>
                     </div>
 
-                    {/* Reach out section + buttons */}
-                    <div className="px-5 pb-8">
-                        <div className="bg-[#0A1628] px-5 py-5 mb-6">
-                            <p className="text-[13px] font-semibold text-[#0066FF] uppercase tracking-[0.08em] mb-3">Reach Out to Us</p>
-                            <p className="text-[12px] text-white/70 leading-relaxed mb-4">
-                                Are you or your child considering studying abroad? Give us a call or send an email — we&apos;re here to help.
-                            </p>
-                            <div className="space-y-2 text-[12px]">
-                                <a href="tel:+447375654996" className="flex items-center gap-2 text-white/80 hover:text-white transition-colors">
-                                    <span className="w-1.5 h-1.5 bg-[#0066FF]" />
-                                    +44 7375 654996 <span className="text-white/50">(International)</span>
-                                </a>
-                                <a href="tel:+2348059000097" className="flex items-center gap-2 text-white/80 hover:text-white transition-colors">
-                                    <span className="w-1.5 h-1.5 bg-[#0066FF]" />
-                                    +234 (0) 805 900 0097 <span className="text-white/50">(Africa)</span>
-                                </a>
-                                <a href="mailto:admin@britishauc.com" className="flex items-center gap-2 text-white/80 hover:text-white transition-colors">
-                                    <span className="w-1.5 h-1.5 bg-[#0066FF]" />
-                                    admin@britishauc.com
-                                </a>
-                            </div>
-                        </div>
-
-                        <div className="space-y-4">
-                            <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)}>
-                                <button className="w-full py-3.5 text-sm font-semibold text-white bg-[#1a56ff] hover:bg-[#1447d1] transition-colors flex items-center justify-center gap-2"><Headset size={16} />Contact</button>
-                            </Link>
-                        </div>
-                    </div>
                 </div>
             </div>
 

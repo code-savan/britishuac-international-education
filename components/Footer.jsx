@@ -57,7 +57,6 @@ const Footer = () => {
                     { href: '/services', label: 'Our Services' },
                     { href: '/blog', label: 'Blogs' },
                     { href: '/events', label: 'Events' },
-                    { href: '/contact', label: 'Contact Us' },
                   ].map(({ href, label }) => (
                     <li key={href}>
                       <Link href={href} className="text-sm text-[#8A9AB0] hover:text-white transition-colors duration-200">
@@ -71,7 +70,6 @@ const Footer = () => {
                 <h3 className="text-[11px] font-bold tracking-[0.12em] uppercase text-[#6B7D9B] mb-6">Support</h3>
                 <ul className="space-y-3">
                   {[
-                    { href: '/contact', label: 'Help Centre' },
                     { href: '/faqs', label: 'FAQs' },
                     { href: '/privacy', label: 'Privacy Policy' },
                     { href: '/terms', label: 'Terms of Use' },
@@ -86,41 +84,43 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="lg:col-span-3 space-y-6">
-              <h3 className="text-[11px] font-bold tracking-[0.12em] uppercase text-[#6B7D9B]">Find Us</h3>
-              {[
-                {
-                  city: "Abuja",
-                  address: "Suite 1057, Kingfem GA247 Plot 264 Ahmadu Bello Express Way, Mabushi-Wuse 2, Abuja, FCT",
-                  phone: "+234 805 900 0097",
-                  email: "admin@britishauc.com"
-                },
-                {
-                  city: "Lagos",
-                  address: "56, Opebi Ikeja Road, Salvation Busstop, Lagos",
-                  phone: "+234 903 389 2750",
-                  email: "lagos@britishauc.com"
-                },
-                {
-                  city: "Port Harcourt",
-                  address: "Davies Mall Plaza 2B, General Diriyai Street off Tombia Extension, GRA Phase 2, Port Harcourt",
-                  phone: "+234 806 758 9413",
-                  email: "portharcourt@britishauc.com"
-                },
-                {
-                  city: "London",
-                  address: "128 City Road, London, EC1V 2NX, United Kingdom",
-                  phone: "+44 7375 654996 (International)",
-                  email: "london@britishauc.com"
-                },
-              ].map((loc, i) => (
-                <div key={i}>
-                  <p className="text-sm font-semibold text-white mb-1">{loc.city}</p>
-                  <p className="text-sm text-[#8A9AB0] leading-relaxed mb-1">{loc.address}</p>
-                  <p className="text-sm text-[#8A9AB0]">{loc.phone}</p>
-                  <a href={`mailto:${loc.email}`} className="text-sm text-[#8A9AB0] hover:text-white transition-colors">{loc.email}</a>
-                </div>
-              ))}
+            <div className="lg:col-span-3">
+              <h3 className="text-[11px] font-bold tracking-[0.12em] uppercase text-[#6B7D9B] mb-6">Find Us</h3>
+              <div className="grid grid-cols-2 gap-x-6 gap-y-5">
+                {[
+                  {
+                    city: "Abuja",
+                    address: "Suite 1057, Kingfem GA247, Mabushi-Wuse 2, Abuja, FCT",
+                    phone: "+234 805 900 0097",
+                    email: "admin@britishauc.com"
+                  },
+                  {
+                    city: "Lagos",
+                    address: "56, Opebi Ikeja Road, Salvation Busstop, Lagos",
+                    phone: "+234 903 389 2750",
+                    email: "lagos@britishauc.com"
+                  },
+                  {
+                    city: "Port Harcourt",
+                    address: "Davies Mall Plaza 2B, GRA Phase 2, Port Harcourt",
+                    phone: "+234 806 758 9413",
+                    email: "portharcourt@britishauc.com"
+                  },
+                  {
+                    city: "London",
+                    address: "128 City Road, London, EC1V 2NX, United Kingdom",
+                    phone: "+44 7375 654996",
+                    email: "london@britishauc.com"
+                  },
+                ].map((loc, i) => (
+                  <div key={i}>
+                    <p className="text-sm font-semibold text-white mb-1">{loc.city}</p>
+                    <p className="text-xs text-[#8A9AB0] leading-relaxed mb-1">{loc.address}</p>
+                    <p className="text-xs text-[#8A9AB0]">{loc.phone}</p>
+                    <a href={`mailto:${loc.email}`} className="text-xs text-[#8A9AB0] hover:text-white transition-colors">{loc.email}</a>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
