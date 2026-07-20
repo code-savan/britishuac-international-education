@@ -8,7 +8,7 @@ const nextConfig = {
     eslint: {
         ignoreDuringBuilds: true,
     },
-    trailingSlash: false,
+    trailingSlash: true,
     webpack: (config, { dev }) => {
         if (dev) {
             config.cache = false
