@@ -1,15 +1,11 @@
-import { NextResponse } from 'next/server'
-
 export function middleware(req) {
   const { pathname } = req.nextUrl
+  if (pathname.startsWith('/_next')) return
 
-  if (pathname.startsWith('/_next')) {
-    return NextResponse.next()
-  }
-
-  return NextResponse.rewrite(new URL('/index.html', req.url))
+  return new Response(
+    '<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Access Denied</title><style>*{margin:0;padding:0;box-sizing:border-box}body{min-height:100vh;display:flex;align-items:center;justify-content:center;background:#000;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}h1{font-size:3rem;font-weight:700;color:#fff;letter-spacing:-0.02em}</style></head><body><h1>Access Denied</h1></body></html>',
+    { headers: { 'Content-Type': 'text/html' } }
+  )
 }
 
-export const config = {
-  matcher: '/:path*',
-}
+export const config = { matcher: '/:path*' }
