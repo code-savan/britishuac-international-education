@@ -1,7 +1,29 @@
-export default function AccessDenied() {
+import Hero from "@/components/Hero"
+import StatsBar from "@/components/StatsBar"
+import CountryMarquee from "@/components/CountryMarquee"
+import About from "@/components/About"
+import HowWeHelp from "@/components/HowWeHelp"
+import WhyChooseUs from "@/components/WhyChooseUs"
+import Partners from "@/components/Partners"
+import Success from "@/components/Success"
+import BlogPreview from "@/components/BlogPreview"
+import FAQ from "@/components/FAQ"
+import CTABanner from "@/components/CTABanner"
+
+export default function InternationalEducation() {
   return (
-    <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#000' }}>
-      <h1 style={{ fontSize: '3rem', fontWeight: 700, color: '#fff', letterSpacing: '-0.02em' }}>Access Denied</h1>
-    </div>
+    <>
+      <Hero />
+      <StatsBar />
+      <CountryMarquee />
+      <About />
+      <HowWeHelp />
+      <WhyChooseUs />
+      <Partners />
+      <Success />
+      <BlogPreview />
+      <FAQ />
+      <CTABanner />
+    </>
   )
 }
