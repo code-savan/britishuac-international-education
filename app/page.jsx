@@ -1,7 +1,7 @@
 export default function AccessDenied() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-black">
-      <h1 className="text-4xl font-bold text-white tracking-tight">Access Denied</h1>
+    <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#000' }}>
+      <h1 style={{ fontSize: '3rem', fontWeight: 700, color: '#fff', letterSpacing: '-0.02em' }}>Access Denied</h1>
     </div>
   )
 }
